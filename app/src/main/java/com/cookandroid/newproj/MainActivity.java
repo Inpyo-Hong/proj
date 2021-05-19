@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.cookandroid.newproj.Today_Exercise.today_exercise;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_exercise, btn_today_exercise;
