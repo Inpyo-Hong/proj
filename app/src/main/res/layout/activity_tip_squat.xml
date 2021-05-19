@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/my_purple"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="스쿼트(squat) : 앉았다일어나기"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height='300dp'
+        android:layout_marginTop="30dp"
+        android:src="@drawable/squat"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="무산소 운동 중 하나로 데드리프트, 벤치 프레스와 더불어 웨이트 트레이닝의 3대 운동 중 하나이다. 특히 하체운동에서는 '알파이자 오메가'인 운동이다.\n1. 다리를 어깨너비만큼 벌린다.\n2. 상체가 앞으로 숙여지지 않도록 코어에 힘을 준 상태로 엉덩이를 뒤로 빼며 앉는다.\n3. 상체의 자세를 유지하면서, 발바닥으로 지면을 밀고 일어나면서 1번의 자세로 돌아온다."/>
+</LinearLayout>

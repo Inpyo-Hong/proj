@@ -28,6 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".cycle_a"/>
+        <activity android:name=".cycle_b"/>
+        <activity android:name=".cycle_c"/>
+        <activity android:name=".tip_squat"/>
+        <activity android:name=".tip_pullup"/>
+        <activity android:name=".tip_pushup"/>
     </application>
 
 </manifest>

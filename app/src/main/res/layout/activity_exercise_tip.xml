@@ -47,12 +47,22 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btn_plank"
+        android:id="@+id/btn_pushup"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="플랭크"
+        android:text="푸쉬업"
+        android:textSize="30sp"
+        android:background="@color/white"
+        style="?android:attr/borderlessButtonStyle"/>
+    <Button
+        android:id="@+id/btn_pullup"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="풀업"
         android:textSize="30sp"
         android:background="@color/white"
         style="?android:attr/borderlessButtonStyle"/>

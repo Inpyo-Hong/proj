@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/my_purple"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="푸쉬업(push-up) : 팔굽혀펴기"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height='300dp'
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pushup"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="흔히 말하는 엎드러 뻗쳐 자세에서 고개를 들고, 어깨에서 발끝까지 일직선을 이루도록 몸을 고정한 후 팔꿈치를 굽혔다 펴는 것이 정석적인 시행 방법이다. \n골반을 앞으로 당긴다는 느낌으로 움직여보면 알아서 복근에 힘이 들어가면서 등과 허리가 평평하게 되는데 바로 그 부분이 매우 중요하다.\n이 자세가 완벽히 수행되어야 상체 전반이 긴장되고 근육 전체를 사용할 수 있다. \n팔을 굽혔다 펼 때 호흡을 들이쉬거나 내쉬는 호흡법을 곁들여서 가르치기도 한다. \n체력장이나 공무원 시험 실기시험이나 경찰이나 군인 등과 같이 몸을 쓰는 직업의 체력검사 때 빠지지 않는 운동으로, 일정한 기준을 책정하기 위해 시간 제한을 두고 실행한다.\n거기에 종종 단체기합용으로도 사용하는 전천후 트레이닝 기술이다."/>
+</LinearLayout>

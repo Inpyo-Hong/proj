@@ -35,7 +35,7 @@
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="10dp"
         android:text="사이클 A"
         android:textSize="30sp"
         android:background="@drawable/round_button"
@@ -74,5 +74,14 @@
         android:background="@color/white"
         style="?android:attr/borderlessButtonStyle"/>
 
-
+    <Button
+        android:id="@+id/btn_cycle_add"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="+ 커스텀 사이클"
+        android:textSize="30sp"
+        android:background="@color/white"
+        style="?android:attr/borderlessButtonStyle"/>
 </LinearLayout>
