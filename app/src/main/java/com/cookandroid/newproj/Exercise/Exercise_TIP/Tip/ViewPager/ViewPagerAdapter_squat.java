@@ -42,11 +42,11 @@ public class ViewPagerAdapter_squat extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "1";
+                return "운동방법";
             case 1:
-                return "2";
+                return "효과적인 운동법";
             case 2:
-                return "3";
+                return "주의사항";
             default:
                 return null;
         }
