@@ -17,10 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewProj">
         <activity android:name=".Today_Exercise.Camera.CameraActivity"></activity>
-        <activity android:name=".exercise_tip" />
-        <activity android:name=".routine" />
+        <activity android:name=".Exercise.Exercise_TIP.exercise_tip" />
+        <activity android:name=".Exercise.Exercise_Cycle.routine" />
         <activity android:name=".Today_Exercise.today_exercise" />
-        <activity android:name=".exercise" />
+        <activity android:name=".Exercise.exercise" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,12 +28,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cycle_a"/>
-        <activity android:name=".cycle_b"/>
-        <activity android:name=".cycle_c"/>
-        <activity android:name=".tip_squat"/>
-        <activity android:name=".tip_pullup"/>
-        <activity android:name=".tip_pushup"/>
+        <activity android:name=".Exercise.Exercise_Cycle.cycle.cycle_a"/>
+        <activity android:name=".Exercise.Exercise_Cycle.cycle.cycle_b"/>
+        <activity android:name=".Exercise.Exercise_Cycle.cycle.cycle_c"/>
+        <activity android:name=".Exercise.Exercise_TIP.Tip.tip_squat"/>
+        <activity android:name=".Exercise.Exercise_TIP.Tip.tip_pullup"/>
+        <activity android:name=".Exercise.Exercise_TIP.Tip.tip_pushup"/>
     </application>
 
 </manifest>

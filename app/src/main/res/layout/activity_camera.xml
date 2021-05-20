@@ -6,4 +6,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:context="com.cookandroid.newproj.Today_Exercise.Camera.CameraActivity" />
+    tools:context=".Today_Exercise.Camera.CameraActivity" />

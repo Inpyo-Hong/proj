@@ -1,4 +1,4 @@
-package com.cookandroid.newproj;
+package com.cookandroid.newproj.Exercise.Exercise_Cycle;
 
 
 import android.content.Intent;
@@ -8,7 +8,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cookandroid.newproj.Today_Exercise.today_exercise;
+import com.cookandroid.newproj.Exercise.Exercise_Cycle.cycle.cycle_a;
+import com.cookandroid.newproj.Exercise.Exercise_Cycle.cycle.cycle_b;
+import com.cookandroid.newproj.Exercise.Exercise_Cycle.cycle.cycle_c;
+import com.cookandroid.newproj.R;
 
 public class routine extends AppCompatActivity {
 

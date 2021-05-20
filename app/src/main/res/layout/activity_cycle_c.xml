@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cycle_c"
+    tools:context=".Exercise.Exercise_Cycle.cycle.cycle_c"
     android:orientation="vertical">
 
     <LinearLayout

@@ -1,8 +1,10 @@
-package com.cookandroid.newproj;
+package com.cookandroid.newproj.Exercise.Exercise_Cycle.cycle;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.cookandroid.newproj.R;
 
 public class cycle_c extends AppCompatActivity {
     @Override

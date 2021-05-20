@@ -1,4 +1,4 @@
-package com.cookandroid.newproj;
+package com.cookandroid.newproj.Exercise.Exercise_TIP.Tip.ViewPager.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,21 +9,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.cookandroid.newproj.R;
+
 import org.jetbrains.annotations.NotNull;
 
-public class Pushup_Frag2 extends Fragment {
+public class Pullup_Frag1 extends Fragment {
     private View view;
 
-    public static Pushup_Frag2 newinstance(){
-        Pushup_Frag2 pushup_frag2 = new Pushup_Frag2();
-        return pushup_frag2;
+    public static Pullup_Frag1 newinstance(){
+        Pullup_Frag1 pullup_frag1 = new Pullup_Frag1();
+        return pullup_frag1;
     }
 
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.pushup_frag_2, container, false);
+        view = inflater.inflate(R.layout.pullup_frag_1, container, false);
 
         return view;
     }
