@@ -1,14 +1,17 @@
 package com.taetae98.iip.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 
 import com.taetae98.iip.R;
+import com.taetae98.iip.activity.Camera.CameraActivity;
 import com.taetae98.iip.base.BaseAdapter;
 import com.taetae98.iip.base.BaseHolder;
 import com.taetae98.iip.dto.ScheduleWithExercise;
@@ -55,6 +58,7 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
         private final TextView nameTextView;
         private final TextView setTextView;
         private final TextView repTextView;
+        private final Button btnPosenet;
 
         public ScheduleWithExerciseHolder(View view) {
             super(view);
@@ -62,6 +66,13 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
             nameTextView = view.findViewById(R.id.name_text_view);
             setTextView = view.findViewById(R.id.set_text_view);
             repTextView = view.findViewById(R.id.rep_text_view);
+            btnPosenet = view.findViewById(R.id.btn_posenet);
+            btnPosenet.setOnClickListener(new Button.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), CameraActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
         @Override
