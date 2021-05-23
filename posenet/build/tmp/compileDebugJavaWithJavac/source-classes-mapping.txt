@@ -1,2 +1,0 @@
-com/cookandroid/newproj/BuildConfig.java
- com.cookandroid.newproj.BuildConfig
