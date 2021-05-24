@@ -1,0 +1,2 @@
+com/taetae98/iip/BuildConfig.java
+ com.taetae98.iip.BuildConfig

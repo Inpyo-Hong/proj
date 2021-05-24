@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.taetae98.iip"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:5:22-62
+12
+13    <uses-feature android:name="android.hardware.camera" />
+13-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:7:5-60
+13-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:7:19-57
+14    <uses-feature android:name="android.hardware.camera.autofocus" />
+14-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:8:5-70
+14-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:8:19-67
+15
+16    <application
+16-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:10:5-28:19
+17        android:allowBackup="true"
+17-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:11:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.6.0-beta01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\da77ec6e7c6477a711541d798b2aec5c\core-1.6.0-beta01\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:extractNativeLibs="false"
+21        android:label="@string/app_name"
+21-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:12:9-41
+22        android:supportsRtl="true"
+22-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:13:9-35
+23        android:testOnly="true"
+24        android:theme="@style/Theme.Iip" >
+24-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:14:9-41
+25        <activity android:name="com.taetae98.iip.activity.Camera.CameraActivity" />
+25-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:15:9-77
+25-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:15:19-65
+26        <activity android:name="com.taetae98.iip.activity.TodayExerciseActivity" />
+26-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:16:9-77
+26-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:16:19-65
+27        <activity android:name="com.taetae98.iip.activity.ExerciseInformationActivity" />
+27-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:17:9-74
+27-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:17:19-71
+28        <activity android:name="com.taetae98.iip.activity.TipActivity" />
+28-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:18:9-58
+28-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:18:19-55
+29        <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
+29-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:19:9-62
+29-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:19:19-59
+30        <activity android:name="com.taetae98.iip.activity.ExerciseActivity" />
+30-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:20:9-63
+30-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:20:19-60
+31        <activity android:name="com.taetae98.iip.activity.MainActivity" >
+31-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:21:9-27:20
+31-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:21:19-56
+32            <intent-filter>
+32-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:22:13-26:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:23:17-69
+33-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:23:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:25:17-77
+35-->C:\Users\user\Desktop\proj\app\src\main\AndroidManifest.xml:25:27-74
+36            </intent-filter>
+37        </activity>
+38
+39        <service
+39-->[androidx.room:room-runtime:2.3.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\23021fc999cd5428657e982bc13e7b31\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+40            android:name="androidx.room.MultiInstanceInvalidationService"
+40-->[androidx.room:room-runtime:2.3.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\23021fc999cd5428657e982bc13e7b31\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+41            android:directBootAware="true"
+41-->[androidx.room:room-runtime:2.3.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\23021fc999cd5428657e982bc13e7b31\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+42            android:exported="false" />
+42-->[androidx.room:room-runtime:2.3.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\23021fc999cd5428657e982bc13e7b31\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+43    </application>
+44
+45</manifest>

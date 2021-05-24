@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taetae98.iip"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Iip" >
+        <activity android:name="com.taetae98.iip.activity.Camera.CameraActivity" />
+        <activity android:name="com.taetae98.iip.activity.TodayExerciseActivity" />
+        <activity android:name="com.taetae98.iip.activity.ExerciseInformationActivity" />
+        <activity android:name="com.taetae98.iip.activity.TipActivity" />
+        <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
+        <activity android:name="com.taetae98.iip.activity.ExerciseActivity" />
+        <activity android:name="com.taetae98.iip.activity.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+    </application>
+
+</manifest>
