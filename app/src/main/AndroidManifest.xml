@@ -25,6 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.Exercise_TIP.Tip.tip_pullup"/>
+        <activity android:name=".activity.Exercise_TIP.Tip.tip_pushup"/>
+        <activity android:name=".activity.Exercise_TIP.Tip.tip_squat"/>
     </application>
 
 </manifest>

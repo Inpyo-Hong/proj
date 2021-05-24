@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="잘못된 운동자세"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="1. 무릎의 안쪽 쏠림\n "/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height='280dp'
+            android:src="@drawable/squat_knee"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:text="허벅지가 안쪽으로 회전하면서 무릎을 끌고 들어가며 벌어지는 현상으로, 이러한 자세가 반복되면 무릎에 통증을 유발한다. 그러므로 무릎은 발과 동일선상에 위치할 수 있도록 한다."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="2. 허리말림\n "/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height='300dp'
+            android:src="@drawable/squat_back"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="허리와 어깨가 둥글게 말리면, 허리에 압력을 가할 수 있어 허이 통증으로 이어질 수 있다. 그렇기 떄문에 상체를 최대한 꼿꼿하게 유지한다는 생각으로 허리를 펴서 운동해야 한다."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="3. 균형의 쏠림\n "/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height='300dp'
+            android:src="@drawable/squat_balance"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="신체비율이 다양하기 때문에 무릎이 지나치게 앞으로 쏠리면, 몸의 균형이 무너지고 체중이 무릎에 많이 실려 통증을 유발한다. 그러므로 몸의 균형이 적절한 자세로 운동해야 한다."/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
+
+
+</LinearLayout>

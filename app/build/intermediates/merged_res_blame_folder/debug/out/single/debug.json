@@ -1,106 +1,182 @@
 [
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_routine.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_routine.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_holder_schedule_with_exercise.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\holder_schedule_with_exercise.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_ic_exercise.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/ic_exercise.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_ten.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/ten.mp3"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_excercise_information.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_excercise_information.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_holder_exercise.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/holder_exercise.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_today_exercise.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_today_exercise.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_exercise.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_exercise.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_three.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\three.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_four.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/four.mp3"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_two.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\two.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_squat_frag_3.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/squat_frag_3.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_posenet.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_posenet.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_pullup.jpg.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/pullup.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_bent.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\bent.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_nine.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\nine.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_exercise.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\drawable\\ic_exercise.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_bent.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/bent.mp3"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_camera.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_camera.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_excercise_information.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_excercise_information.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_eight.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\eight.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_squat_knee.png.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/squat_knee.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_exercise.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_exercise.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pullup_frag_1.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pullup_frag_1.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_four.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\four.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_three.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/three.mp3"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_icon_exercise.jpg.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\drawable-v24\\icon_exercise.jpg"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pullup_frag_3.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pullup_frag_3.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_holder_exercise.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\holder_exercise.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_six.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/six.mp3"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_create_schedule.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\dialog_create_schedule.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_tip_squat.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_tip_squat.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable-v24_icon_exercise.jpg.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable-v24/icon_exercise.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_one.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\one.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pushup_frag_2.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pushup_frag_2.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_tip.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_tip.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_tip_pushup.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_tip_pushup.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_seven.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\seven.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_squat_back.png.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/squat_back.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_five.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\five.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_routine.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_routine.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_ten.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\ten.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_squat_frag_2.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/squat_frag_2.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\raw_six.mp3.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\raw\\six.mp3"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_squat.jpg.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/squat.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_dialog_create_schedule.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/dialog_create_schedule.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_five.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/five.mp3"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_squat2.png.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/squat2.png"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_today_exercise.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_today_exercise.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_camera.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_camera.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_tip_pullup.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_tip_pullup.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_posenet.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_posenet.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_one.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/one.mp3"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_pushup.jpg.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/pushup.jpg"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pullup_frag_2.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pullup_frag_2.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pushup_frag_3.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pushup_frag_3.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_two.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/two.mp3"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_squat_frag_1.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/squat_frag_1.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable_squat_balance.png.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/drawable/squat_balance.png"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_holder_schedule_with_exercise.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/holder_schedule_with_exercise.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_eight.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/eight.mp3"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_nine.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/nine.mp3"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_activity_tip.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/activity_tip.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/layout_pushup_frag_1.xml.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pushup_frag_1.xml"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_seven.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/seven.mp3"
     }
 ]
