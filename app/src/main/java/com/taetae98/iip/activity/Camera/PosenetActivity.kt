@@ -393,7 +393,7 @@ class PosenetActivity :
       // Create rotated version for portrait display
       val rotateMatrix = Matrix()
       rotateMatrix.setScale(1F,-1F)
-      rotateMatrix.postRotate(270.0f)
+      rotateMatrix.postRotate(180.0f)
 
       val rotatedBitmap = Bitmap.createBitmap(
         imageBitmap, 0, 0, previewWidth, previewHeight,

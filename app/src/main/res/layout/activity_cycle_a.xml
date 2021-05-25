@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:text="세트 수는 10, 반복 횟수는 20입니다."
+        android:text="세트 수는 10, 반복 횟수는 10입니다."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fri" />
 

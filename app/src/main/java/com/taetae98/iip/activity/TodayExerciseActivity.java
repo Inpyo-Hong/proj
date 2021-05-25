@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.CalendarView;
 
@@ -19,6 +21,7 @@ import com.taetae98.iip.singleton.AppDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -28,6 +31,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
     private int year;
     private int month;
     private int day;
+    private int week;
 
 
     private final ScheduleWithExerciseAdapter scheduleWithExerciseAdapter = new ScheduleWithExerciseAdapter();
@@ -43,7 +47,107 @@ public class TodayExerciseActivity extends AppCompatActivity {
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
+        week = calendar.get(Calendar.DAY_OF_WEEK);
 
+        Intent intent = getIntent();
+        if(!TextUtils.isEmpty(intent.getStringExtra("check"))){
+            for(String i: Arrays.asList("mon_1", "mon_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 4, 31, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("wed_1", "wed_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 2, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("fri_1", "fri_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 4, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("mon_1", "mon_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 7, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("wed_1", "wed_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 9, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("fri_1", "fri_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 11, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("mon_1", "mon_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 14, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("wed_1", "wed_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 16, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("fri_1", "fri_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 18, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("mon_1", "mon_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 21, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("wed_1", "wed_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 23, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+            for(String i: Arrays.asList("fri_1", "fri_2")) {
+                long exerciseId = intent.getExtras().getLong(i);
+                for (int j = 0; j < 10; j++) {
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, 5, 25, exerciseId, j + 1, 10)
+                    );
+                }
+            }
+        }
         notifyAdapter();
         onCreateCalendarView();
         onCreateRecyclerView();
