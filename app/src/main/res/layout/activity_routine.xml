@@ -10,9 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="사이클 선택하세요!"
+            android:text="사이클을 선택하세요!"
+            android:textSize="30sp"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="200dp"
+            android:gravity="left|center"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -20,12 +23,36 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        app:layout_anchor="@id/recycler_view"
-        app:layout_anchorGravity="end|bottom"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_a"
+        android:text="사이클 A"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_b"
+        android:text="사이클 B"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_c"
+        android:text="사이클 C"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_d"
+        android:text="사이클 D"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="450dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

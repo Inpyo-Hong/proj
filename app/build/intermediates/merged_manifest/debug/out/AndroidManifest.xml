@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="29" />
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -24,6 +24,10 @@
         android:theme="@style/Theme.Iip" >
         <activity android:name="com.taetae98.iip.activity.Camera.CameraActivity" />
         <activity android:name="com.taetae98.iip.activity.TodayExerciseActivity" />
+        <activity android:name="com.taetae98.iip.activity.cycle_a" />
+        <activity android:name="com.taetae98.iip.activity.cycle_b" />
+        <activity android:name="com.taetae98.iip.activity.cycle_c" />
+        <activity android:name="com.taetae98.iip.activity.cycle_d" />
         <activity android:name="com.taetae98.iip.activity.ExerciseInformationActivity" />
         <activity android:name="com.taetae98.iip.activity.TipActivity" />
         <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
@@ -35,6 +39,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pullup" />
+        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pushup" />
+        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_squat" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"
