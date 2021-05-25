@@ -1,6 +1,8 @@
 package com.taetae98.iip.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -14,6 +16,8 @@ import com.taetae98.iip.dialog.CreateScheduleDialog;
 import com.taetae98.iip.dto.Schedule;
 import com.taetae98.iip.dto.ScheduleWithExercise;
 import com.taetae98.iip.singleton.AppDatabase;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -32,6 +36,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today_exercise);
+        List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
 
         Calendar calendar = new GregorianCalendar();
 
@@ -43,6 +48,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
         onCreateCalendarView();
         onCreateRecyclerView();
         onCreateFloatingActionButton();
+
     }
 
     private void onCreateCalendarView() {
@@ -59,6 +65,20 @@ public class TodayExerciseActivity extends AppCompatActivity {
     private void onCreateRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setAdapter(scheduleWithExerciseAdapter);
+        List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull @NotNull RecyclerView recyclerView, @NonNull @NotNull RecyclerView.ViewHolder viewHolder, @NonNull @NotNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull @NotNull RecyclerView.ViewHolder viewHolder, int direction) {
+                list.remove(viewHolder.getAdapterPosition());
+                scheduleWithExerciseAdapter.notifyDataSetChanged();
+            }
+        }).attachToRecyclerView(recyclerView);
     }
 
     private void onCreateFloatingActionButton() {
@@ -66,9 +86,11 @@ public class TodayExerciseActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(view -> {
             CreateScheduleDialog dialog = new CreateScheduleDialog(TodayExerciseActivity.this);
             dialog.setCallback((exerciseId, set, rep) -> {
-                AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                        new Schedule(0L, year, month, day, exerciseId, set, rep)
-                );
+                for (int j=0;j<set;j++){
+                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                            new Schedule(0L, year, month, day, exerciseId, j+1, rep)
+                    );
+                }
                 notifyAdapter();
             });
 
