@@ -31,9 +31,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd3f775-5030-406d-b664-c82973c4d526" name="Default Changelist" comment="운동팁 내용 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5dd3f775-5030-406d-b664-c82973c4d526" name="Default Changelist" comment="운동팁 내용 추가" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +65,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
@@ -201,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621966271665</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="운동팁 내용 추가">
+      <created>1621967115522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621967115522</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,23 +281,24 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1316" y="65" width="1487" height="1156" key="MergeDialog/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621503764118" />
-    <state x="3541" y="604" key="SettingsEditor" timestamp="1621749544413">
-      <screen x="3440" y="0" width="1200" height="1920" />
-    </state>
-    <state x="3541" y="604" key="SettingsEditor/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621749544413" />
-    <state x="307" y="375" key="Vcs.Push.Dialog.v2" timestamp="1621966277822">
+    <state x="196" y="188" key="SettingsEditor" timestamp="1621967425879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="307" y="375" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621966277822" />
+    <state x="196" y="188" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621967425879" />
+    <state x="3541" y="604" key="SettingsEditor/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621749544413" />
+    <state x="307" y="375" key="Vcs.Push.Dialog.v2" timestamp="1621967201231">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="307" y="375" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621967201231" />
     <state x="3632" y="693" key="Vcs.Push.Dialog.v2/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621762399388" />
     <state x="3834" y="737" key="chooseDestDirectoryDialog" timestamp="1621751228533">
       <screen x="3440" y="0" width="1200" height="1920" />
     </state>
     <state x="3834" y="737" key="chooseDestDirectoryDialog/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621751228533" />
-    <state x="664" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621965933998">
+    <state x="664" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621967100475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621965933998" />
+    <state x="664" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621967100475" />
     <state x="3855" y="873" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621937255392" />
     <state x="3696" y="460" key="run.anything.popup" timestamp="1621937836672">
       <screen x="3440" y="0" width="1200" height="1920" />
