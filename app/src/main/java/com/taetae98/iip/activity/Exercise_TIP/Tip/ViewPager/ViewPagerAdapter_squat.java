@@ -1,11 +1,15 @@
 package com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager;
 
+import android.content.Intent;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.taetae98.iip.activity.ExerciseInformationActivity;
 import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Squat_Frag1;
 import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Squat_Frag2;
 import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Squat_Frag3;
@@ -51,4 +55,5 @@ public class ViewPagerAdapter_squat extends FragmentPagerAdapter {
                 return null;
         }
     }
+
 }

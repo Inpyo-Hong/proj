@@ -4,24 +4,58 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="풀업 페이지 1"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height='300dp'
-        android:layout_marginTop="30dp"
-        android:src="@drawable/pullup"
-        android:layout_gravity="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="철봉을 손으로 잡고 당겨 턱을 철봉 위까지 끌어 올리는 운동.\n
-"/>
-//맨손 운동의 알파이자 오메가. 도구를 사용하지 않는 칼리스데닉스 운동법에서도 철봉이나 풀업바를 이용한 턱걸이는 반드시 들어갈 정도이며 웨이트나 어떤 운동을 하든 등근육을 발달시키기 위해서는 반드시 들어가는 필수 동작으로 그 중요성과 효율성은 두말할 필요가 없는 그야말로 최고의 맨몸 운동.\n상완이두근과 등근육 뿐만 아니라 상체근육 전체를 골고루 단련시키는 운동.\n요즈음 여러 맨몸운동 사이트에서 괜히 턱걸이를 강조하는 게 아니다.\n광배근이 워낙 다른 운동에도 영향력이 상당하다 보니 보디빌딩. 크로스핏 등의 운동 뿐만 아니라 투기 종목 등에서도 정말 일상적으로 실시하는 운동이 바로 턱걸이다.
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height='300dp'
+                android:layout_marginTop="30dp"
+                android:src="@drawable/pullup"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PULL-UP"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="맨손 운동의 알파이자 오메가. 도구를 사용하지 않는 칼리스데닉스 운동법에서도 철봉이나 풀업바를 이용한 턱걸이는 반드시 들어갈 정도이며 웨이트나 어떤 운동을 하든 등근육을 발달시키기 위해서는 반드시 들어가는 필수 동작으로 그 중요성과 효율성은 두말할 필요가 없는 그야말로 최고의 맨몸 운동이다.광배근이 워낙 다른 운동에도 영향력이 상당하다 보니 보디빌딩. 크로스핏 등의 운동 뿐만 아니라 투기 종목 등에서도 정말 일상적으로 실시하는 운동이 바로 턱걸이다\n\n"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="운동 순서"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/black"
+                android:text="1.철봉에 매달려서 당길수 있는 최대치를 당긴다.\n2. 처음 힘이 있을때는 가슴을 봉에 댄다는 생각으로 명치를 앞으로 민다는 느낌으로 올라간다.\n3. 힘이 빠지기 시작하면 되는데까지만 최선을 다해 당기고 마지막에는 당긴상태에서 5초간 버틴 후 내려온다."/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

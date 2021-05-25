@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Pullup_Frag1;
 import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Pullup_Frag2;
-import com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Pullup_Frag3;
+
 
 public class ViewPagerAdapter_pullup extends FragmentPagerAdapter {
     public ViewPagerAdapter_pullup(@NonNull FragmentManager fm) {
@@ -24,8 +24,6 @@ public class ViewPagerAdapter_pullup extends FragmentPagerAdapter {
                 return Pullup_Frag1.newinstance();
             case 1:
                 return Pullup_Frag2.newinstance();
-            case 2:
-                return Pullup_Frag3.newinstance();
             default:
                 return null;
         }
@@ -33,7 +31,7 @@ public class ViewPagerAdapter_pullup extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     //탭레이아웃 상단에 글씨
@@ -42,13 +40,15 @@ public class ViewPagerAdapter_pullup extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "1";
+                return "운동방법";
             case 1:
-                return "2";
-            case 2:
-                return "3";
+                return "종류";
             default:
                 return null;
         }
     }
+
+
+
+
 }

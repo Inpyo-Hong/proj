@@ -1694,7 +1694,14 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable pullup
+drawable pullup_chinup
+drawable pullup_method
+drawable pullup_pullup
 drawable pushup
+drawable pushup_wrong_1
+drawable pushup_wrong_2
+drawable pushup_wrong_3
+drawable pushupmethod
 drawable squat
 drawable squat2
 drawable squat_back
@@ -2304,7 +2311,6 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout pullup_frag_1
 layout pullup_frag_2
-layout pullup_frag_3
 layout pushup_frag_1
 layout pushup_frag_2
 layout pushup_frag_3
