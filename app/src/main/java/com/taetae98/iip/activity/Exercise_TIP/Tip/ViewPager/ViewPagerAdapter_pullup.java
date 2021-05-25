@@ -34,7 +34,7 @@ public class ViewPagerAdapter_pullup extends FragmentPagerAdapter {
         return 2;
     }
 
-    //탭레이아웃 상단에 글씨
+    //탭레이아웃 상단에 글씨적용
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
