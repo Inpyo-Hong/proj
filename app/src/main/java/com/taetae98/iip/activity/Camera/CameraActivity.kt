@@ -1,9 +1,11 @@
 package com.taetae98.iip.activity.Camera
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.taetae98.iip.R
+
 
 class CameraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

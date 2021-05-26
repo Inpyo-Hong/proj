@@ -41,9 +41,9 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Exercise` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `tip` TEXT, `image1` INTEGER NOT NULL)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Schedule` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `year` INTEGER NOT NULL, `month` INTEGER NOT NULL, `day` INTEGER NOT NULL, `exerciseId` INTEGER NOT NULL, `set` INTEGER NOT NULL, `rep` INTEGER NOT NULL, FOREIGN KEY(`exerciseId`) REFERENCES `Exercise`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Schedule` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `year` INTEGER NOT NULL, `month` INTEGER NOT NULL, `day` INTEGER NOT NULL, `exerciseId` INTEGER NOT NULL, `set` INTEGER NOT NULL, `rep` INTEGER NOT NULL, `done` INTEGER NOT NULL, FOREIGN KEY(`exerciseId`) REFERENCES `Exercise`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1b327cc57fb6244673728ad9a32102b1')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0dd92cc2e058d61ac6631ba0542b9b95')");
       }
 
       @Override
@@ -103,7 +103,7 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoExercise + "\n"
                   + " Found:\n" + _existingExercise);
         }
-        final HashMap<String, TableInfo.Column> _columnsSchedule = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsSchedule = new HashMap<String, TableInfo.Column>(8);
         _columnsSchedule.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsSchedule.put("year", new TableInfo.Column("year", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsSchedule.put("month", new TableInfo.Column("month", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -111,6 +111,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         _columnsSchedule.put("exerciseId", new TableInfo.Column("exerciseId", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsSchedule.put("set", new TableInfo.Column("set", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsSchedule.put("rep", new TableInfo.Column("rep", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSchedule.put("done", new TableInfo.Column("done", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysSchedule = new HashSet<TableInfo.ForeignKey>(1);
         _foreignKeysSchedule.add(new TableInfo.ForeignKey("Exercise", "CASCADE", "CASCADE",Arrays.asList("exerciseId"), Arrays.asList("id")));
         final HashSet<TableInfo.Index> _indicesSchedule = new HashSet<TableInfo.Index>(0);
@@ -123,7 +124,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "1b327cc57fb6244673728ad9a32102b1", "6c9751d6e547ed99d48a4f00e13bee78");
+    }, "0dd92cc2e058d61ac6631ba0542b9b95", "3f37f88d0d54456d65507c76a90e95e4");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

@@ -1,5 +1,8 @@
 package com.taetae98.iip.dto;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -15,7 +18,7 @@ import androidx.room.PrimaryKey;
                 )
         }
 )
-public class Schedule {
+public class Schedule implements Parcelable {
     @PrimaryKey(autoGenerate = true)
     private long id;
     private int year;
@@ -24,8 +27,9 @@ public class Schedule {
     private long exerciseId;
     private int set;
     private int rep;
+    private boolean done;
 
-    public Schedule(long id, int year, int month, int day, long exerciseId, int set, int rep) {
+    public Schedule(long id, int year, int month, int day, long exerciseId, int set, int rep, boolean done) {
         this.id = id;
         this.year = year;
         this.month = month;
@@ -33,7 +37,48 @@ public class Schedule {
         this.exerciseId = exerciseId;
         this.set = set;
         this.rep = rep;
+        this.done = done;
     }
+
+    protected Schedule(Parcel in) {
+        id = in.readLong();
+        year = in.readInt();
+        month = in.readInt();
+        day = in.readInt();
+        exerciseId = in.readLong();
+        set = in.readInt();
+        rep = in.readInt();
+        done = in.readByte() != 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(id);
+        dest.writeInt(year);
+        dest.writeInt(month);
+        dest.writeInt(day);
+        dest.writeLong(exerciseId);
+        dest.writeInt(set);
+        dest.writeInt(rep);
+        dest.writeByte((byte) (done ? 1 : 0));
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Schedule> CREATOR = new Creator<Schedule>() {
+        @Override
+        public Schedule createFromParcel(Parcel in) {
+            return new Schedule(in);
+        }
+
+        @Override
+        public Schedule[] newArray(int size) {
+            return new Schedule[size];
+        }
+    };
 
     public long getId() {
         return id;
@@ -89,5 +134,13 @@ public class Schedule {
 
     public void setRep(int rep) {
         this.rep = rep;
+    }
+
+    public boolean getDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 }

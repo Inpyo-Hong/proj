@@ -1,6 +1,7 @@
 package com.taetae98.iip.adapter;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.taetae98.iip.R;
 import com.taetae98.iip.activity.Camera.CameraActivity;
 import com.taetae98.iip.base.BaseAdapter;
 import com.taetae98.iip.base.BaseHolder;
+import com.taetae98.iip.dto.Schedule;
 import com.taetae98.iip.dto.ScheduleWithExercise;
 
 public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercise> {
@@ -55,10 +57,12 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
     }
 
     static class ScheduleWithExerciseHolder extends BaseHolder<ScheduleWithExercise> {
+        private Schedule E = null;
         private final TextView nameTextView;
         private final TextView setTextView;
         private final TextView repTextView;
         private final Button btnPosenet;
+        private final boolean Done = false;
 
         public ScheduleWithExerciseHolder(View view) {
             super(view);
@@ -70,6 +74,7 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
             btnPosenet.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(), CameraActivity.class);
+                    intent.putExtra("E", E);
                     v.getContext().startActivity(intent);
                 }
             });
@@ -78,9 +83,11 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
         @Override
         public void bind(ScheduleWithExercise element) {
             super.bind(element);
+            E = element.getSchedule();
             nameTextView.setText(element.getExercise().getName());
             setTextView.setText(String.valueOf(element.getSchedule().getSet()));
             repTextView.setText(String.valueOf(element.getSchedule().getRep()));
+            btnPosenet.setEnabled(!element.getSchedule().getDone());
         }
     }
 }

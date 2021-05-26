@@ -37,7 +37,7 @@ public final class ScheduleDao_Impl implements ScheduleDao {
     this.__insertionAdapterOfSchedule = new EntityInsertionAdapter<Schedule>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Schedule` (`id`,`year`,`month`,`day`,`exerciseId`,`set`,`rep`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Schedule` (`id`,`year`,`month`,`day`,`exerciseId`,`set`,`rep`,`done`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -49,6 +49,9 @@ public final class ScheduleDao_Impl implements ScheduleDao {
         stmt.bindLong(5, value.getExerciseId());
         stmt.bindLong(6, value.getSet());
         stmt.bindLong(7, value.getRep());
+        final int _tmp;
+        _tmp = value.getDone() ? 1 : 0;
+        stmt.bindLong(8, _tmp);
       }
     };
     this.__deletionAdapterOfSchedule = new EntityDeletionOrUpdateAdapter<Schedule>(__db) {
@@ -65,7 +68,7 @@ public final class ScheduleDao_Impl implements ScheduleDao {
     this.__updateAdapterOfSchedule = new EntityDeletionOrUpdateAdapter<Schedule>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Schedule` SET `id` = ?,`year` = ?,`month` = ?,`day` = ?,`exerciseId` = ?,`set` = ?,`rep` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `Schedule` SET `id` = ?,`year` = ?,`month` = ?,`day` = ?,`exerciseId` = ?,`set` = ?,`rep` = ?,`done` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -77,7 +80,10 @@ public final class ScheduleDao_Impl implements ScheduleDao {
         stmt.bindLong(5, value.getExerciseId());
         stmt.bindLong(6, value.getSet());
         stmt.bindLong(7, value.getRep());
-        stmt.bindLong(8, value.getId());
+        final int _tmp;
+        _tmp = value.getDone() ? 1 : 0;
+        stmt.bindLong(8, _tmp);
+        stmt.bindLong(9, value.getId());
       }
     };
   }
@@ -132,6 +138,7 @@ public final class ScheduleDao_Impl implements ScheduleDao {
       final int _cursorIndexOfExerciseId = CursorUtil.getColumnIndexOrThrow(_cursor, "exerciseId");
       final int _cursorIndexOfSet = CursorUtil.getColumnIndexOrThrow(_cursor, "set");
       final int _cursorIndexOfRep = CursorUtil.getColumnIndexOrThrow(_cursor, "rep");
+      final int _cursorIndexOfDone = CursorUtil.getColumnIndexOrThrow(_cursor, "done");
       final LongSparseArray<Exercise> _collectionExercise = new LongSparseArray<Exercise>();
       while (_cursor.moveToNext()) {
         if (!_cursor.isNull(_cursorIndexOfExerciseId)) {
@@ -145,7 +152,7 @@ public final class ScheduleDao_Impl implements ScheduleDao {
       while(_cursor.moveToNext()) {
         final ScheduleWithExercise _item;
         final Schedule _tmpSchedule;
-        if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfYear) && _cursor.isNull(_cursorIndexOfMonth) && _cursor.isNull(_cursorIndexOfDay) && _cursor.isNull(_cursorIndexOfExerciseId) && _cursor.isNull(_cursorIndexOfSet) && _cursor.isNull(_cursorIndexOfRep))) {
+        if (! (_cursor.isNull(_cursorIndexOfId) && _cursor.isNull(_cursorIndexOfYear) && _cursor.isNull(_cursorIndexOfMonth) && _cursor.isNull(_cursorIndexOfDay) && _cursor.isNull(_cursorIndexOfExerciseId) && _cursor.isNull(_cursorIndexOfSet) && _cursor.isNull(_cursorIndexOfRep) && _cursor.isNull(_cursorIndexOfDone))) {
           final long _tmpId;
           _tmpId = _cursor.getLong(_cursorIndexOfId);
           final int _tmpYear;
@@ -160,7 +167,11 @@ public final class ScheduleDao_Impl implements ScheduleDao {
           _tmpSet = _cursor.getInt(_cursorIndexOfSet);
           final int _tmpRep;
           _tmpRep = _cursor.getInt(_cursorIndexOfRep);
-          _tmpSchedule = new Schedule(_tmpId,_tmpYear,_tmpMonth,_tmpDay,_tmpExerciseId,_tmpSet,_tmpRep);
+          final boolean _tmpDone;
+          final int _tmp;
+          _tmp = _cursor.getInt(_cursorIndexOfDone);
+          _tmpDone = _tmp != 0;
+          _tmpSchedule = new Schedule(_tmpId,_tmpYear,_tmpMonth,_tmpDay,_tmpExerciseId,_tmpSet,_tmpRep,_tmpDone);
         }  else  {
           _tmpSchedule = null;
         }

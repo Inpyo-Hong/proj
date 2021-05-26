@@ -1,6 +1,7 @@
 package com.taetae98.iip.activity.Camera
 
 import android.Manifest
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
@@ -22,11 +23,13 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.taetae98.iip.R
-import org.tensorflow.lite.examples.posenet.ImageUtils
-import org.tensorflow.lite.examples.posenet.*
+import com.taetae98.iip.dto.Schedule
+import com.taetae98.iip.dto.ScheduleWithExercise
 import com.taetae98.iip.posenet.lib.BodyPart
 import com.taetae98.iip.posenet.lib.Person
 import com.taetae98.iip.posenet.lib.Posenet
+import com.taetae98.iip.singleton.AppDatabase
+import org.tensorflow.lite.examples.posenet.*
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 import kotlin.math.abs
@@ -559,7 +562,11 @@ class PosenetActivity :
     if(angle < 120 && squart == true){
       bent = true
     }
-
+    val E = activity?.intent?.getParcelableExtra<Schedule>("E")
+    AppDatabase.getInstance(context).schedule().update(
+      Schedule(E!!.id, E.year, E.month, E.day, E.exerciseId, E.set, E.rep, !E.done)
+    )
+    activity?.finish()
     if(angle < 90 && squart == true) {
       bent = false
       squart = false
@@ -568,6 +575,7 @@ class PosenetActivity :
       cnt += 1
       if(cnt==1){
         var mediaPlayer = MediaPlayer.create(context, R.raw.one).start()
+
       }
       if(cnt==2){
         var mediaPlayer = MediaPlayer.create(context, R.raw.two).start()
@@ -598,6 +606,7 @@ class PosenetActivity :
 
       if(cnt==10){
         var mediaPlayer = MediaPlayer.create(context, R.raw.ten).start()
+
       }
 
       squart = true

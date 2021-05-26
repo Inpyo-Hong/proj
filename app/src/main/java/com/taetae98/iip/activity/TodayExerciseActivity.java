@@ -1,11 +1,13 @@
 package com.taetae98.iip.activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -55,7 +57,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 4, 31, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 4, 31, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -63,7 +65,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 2, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 2, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -71,7 +73,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 4, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 4, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -79,7 +81,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 7, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 7, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -87,7 +89,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 9, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 9, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -95,7 +97,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 11, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 11, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -103,7 +105,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 14, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 14, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -111,7 +113,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 16, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 16, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -119,7 +121,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 18, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 18, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -127,7 +129,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 21, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 21, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -135,7 +137,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 23, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 23, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -143,7 +145,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 long exerciseId = intent.getExtras().getLong(i);
                 for (int j = 0; j < 10; j++) {
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, 5, 25, exerciseId, j + 1, 10)
+                            new Schedule(0L, year, 5, 25, exerciseId, j + 1, 10, false)
                     );
                 }
             }
@@ -155,15 +157,23 @@ public class TodayExerciseActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        notifyAdapter();
+    }
+
     private void onCreateCalendarView() {
         CalendarView calendarView = findViewById(R.id.calendar_view);
-        calendarView.setOnDateChangeListener((view, year, month, day) -> {
-            this.year = year;
-            this.month = month;
-            this.day = day;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            calendarView.setOnDateChangeListener((view, year, month, day) -> {
+                this.year = year;
+                this.month = month;
+                this.day = day;
 
-            notifyAdapter();
-        });
+                notifyAdapter();
+            });
+        }
     }
 
     private void onCreateRecyclerView() {
@@ -192,7 +202,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
             dialog.setCallback((exerciseId, set, rep) -> {
                 for (int j=0;j<set;j++){
                     AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, month, day, exerciseId, j+1, rep)
+                            new Schedule(0L, year, month, day, exerciseId, j+1, rep, false)
                     );
                 }
                 notifyAdapter();
@@ -205,10 +215,12 @@ public class TodayExerciseActivity extends AppCompatActivity {
     private void notifyAdapter() {
         List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
 
-        scheduleWithExerciseAdapter.submitList(
-                list.stream().filter(scheduleWithExercise -> scheduleWithExercise.getSchedule().getYear() == year &&
-                        scheduleWithExercise.getSchedule().getMonth() == month &&
-                        scheduleWithExercise.getSchedule().getDay() == day).collect(Collectors.toList())
-        );
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            scheduleWithExerciseAdapter.submitList(
+                    list.stream().filter(scheduleWithExercise -> scheduleWithExercise.getSchedule().getYear() == year &&
+                            scheduleWithExercise.getSchedule().getMonth() == month &&
+                            scheduleWithExercise.getSchedule().getDay() == day).collect(Collectors.toList())
+            );
+        }
     }
 }
