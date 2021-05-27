@@ -1,8 +1,6 @@
 package com.taetae98.iip.activity.Camera
 
 import android.Manifest
-import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
@@ -19,6 +17,7 @@ import android.util.Log
 import android.util.Size
 import android.util.SparseIntArray
 import android.view.*
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
@@ -27,7 +26,6 @@ import androidx.fragment.app.Fragment
 import com.taetae98.iip.R
 import com.taetae98.iip.activity.TodayExerciseActivity
 import com.taetae98.iip.dto.Schedule
-import com.taetae98.iip.dto.ScheduleWithExercise
 import com.taetae98.iip.posenet.lib.BodyPart
 import com.taetae98.iip.posenet.lib.Person
 import com.taetae98.iip.posenet.lib.Posenet
@@ -40,29 +38,31 @@ import kotlin.math.pow
 import kotlin.math.round
 import kotlin.math.sqrt
 
+
 private var cnt: Int = 0
 private var angle = 180.0
 private var bent = false // true : bent, false : normal
 private var squart = true // true : stand, false : sit
+private var PERSON = false
 
 class PosenetActivity :
-  Fragment(),
-  ActivityCompat.OnRequestPermissionsResultCallback {
+        Fragment(),
+        ActivityCompat.OnRequestPermissionsResultCallback {
 
   /** List of body joints that should be connected.    */
   private val bodyJoints = listOf(
-    Pair(BodyPart.LEFT_WRIST, BodyPart.LEFT_ELBOW),
-    Pair(BodyPart.LEFT_ELBOW, BodyPart.LEFT_SHOULDER),
-    Pair(BodyPart.LEFT_SHOULDER, BodyPart.RIGHT_SHOULDER),
-    Pair(BodyPart.RIGHT_SHOULDER, BodyPart.RIGHT_ELBOW),
-    Pair(BodyPart.RIGHT_ELBOW, BodyPart.RIGHT_WRIST),
-    Pair(BodyPart.LEFT_SHOULDER, BodyPart.LEFT_HIP),
-    Pair(BodyPart.LEFT_HIP, BodyPart.RIGHT_HIP),
-    Pair(BodyPart.RIGHT_HIP, BodyPart.RIGHT_SHOULDER),
-    Pair(BodyPart.LEFT_HIP, BodyPart.LEFT_KNEE),
-    Pair(BodyPart.LEFT_KNEE, BodyPart.LEFT_ANKLE),
-    Pair(BodyPart.RIGHT_HIP, BodyPart.RIGHT_KNEE),
-    Pair(BodyPart.RIGHT_KNEE, BodyPart.RIGHT_ANKLE)
+          Pair(BodyPart.LEFT_WRIST, BodyPart.LEFT_ELBOW),
+          Pair(BodyPart.LEFT_ELBOW, BodyPart.LEFT_SHOULDER),
+          Pair(BodyPart.LEFT_SHOULDER, BodyPart.RIGHT_SHOULDER),
+          Pair(BodyPart.RIGHT_SHOULDER, BodyPart.RIGHT_ELBOW),
+          Pair(BodyPart.RIGHT_ELBOW, BodyPart.RIGHT_WRIST),
+          Pair(BodyPart.LEFT_SHOULDER, BodyPart.LEFT_HIP),
+          Pair(BodyPart.LEFT_HIP, BodyPart.RIGHT_HIP),
+          Pair(BodyPart.RIGHT_HIP, BodyPart.RIGHT_SHOULDER),
+          Pair(BodyPart.LEFT_HIP, BodyPart.LEFT_KNEE),
+          Pair(BodyPart.LEFT_KNEE, BodyPart.LEFT_ANKLE),
+          Pair(BodyPart.RIGHT_HIP, BodyPart.RIGHT_KNEE),
+          Pair(BodyPart.RIGHT_KNEE, BodyPart.RIGHT_ANKLE)
   )
 
   /** Threshold for confidence score. */
@@ -171,9 +171,9 @@ class PosenetActivity :
   }
 
   override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
+          inflater: LayoutInflater,
+          container: ViewGroup?,
+          savedInstanceState: Bundle?
   ): View? = inflater.inflate(R.layout.activity_posenet, container, false)
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -212,14 +212,14 @@ class PosenetActivity :
   }
 
   override fun onRequestPermissionsResult(
-    requestCode: Int,
-    permissions: Array<String>,
-    grantResults: IntArray
+          requestCode: Int,
+          permissions: Array<String>,
+          grantResults: IntArray
   ) {
     if (requestCode == REQUEST_CAMERA_PERMISSION) {
       if (allPermissionsGranted(grantResults)) {
         ErrorDialog.newInstance(getString(R.string.tfe_pn_request_permission))
-          .show(childFragmentManager, FRAGMENT_DIALOG)
+                .show(childFragmentManager, FRAGMENT_DIALOG)
       }
     } else {
       super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -243,7 +243,7 @@ class PosenetActivity :
         // We don't use a front facing camera in this sample.
         val cameraDirection = characteristics.get(CameraCharacteristics.LENS_FACING)
         if (cameraDirection != null &&
-          cameraDirection == CameraCharacteristics.LENS_FACING_FRONT
+                cameraDirection == CameraCharacteristics.LENS_FACING_FRONT
         ) {
           continue
         }
@@ -251,8 +251,8 @@ class PosenetActivity :
         previewSize = Size(PREVIEW_WIDTH, PREVIEW_HEIGHT)
 
         imageReader = ImageReader.newInstance(
-          PREVIEW_WIDTH, PREVIEW_HEIGHT,
-          ImageFormat.YUV_420_888, /*maxImages*/ 2
+                PREVIEW_WIDTH, PREVIEW_HEIGHT,
+                ImageFormat.YUV_420_888, /*maxImages*/ 2
         )
 
         sensorOrientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION)!!
@@ -265,7 +265,7 @@ class PosenetActivity :
 
         // Check if the flash is supported.
         flashSupported =
-          characteristics.get(CameraCharacteristics.FLASH_INFO_AVAILABLE) == true
+                characteristics.get(CameraCharacteristics.FLASH_INFO_AVAILABLE) == true
 
         this.cameraId = cameraId
 
@@ -279,7 +279,7 @@ class PosenetActivity :
       // Currently an NPE is thrown when the Camera2API is used but not supported on the
       // device this code runs.
       ErrorDialog.newInstance(getString(R.string.tfe_pn_camera_error))
-        .show(childFragmentManager, FRAGMENT_DIALOG)
+              .show(childFragmentManager, FRAGMENT_DIALOG)
     }
   }
 
@@ -288,7 +288,7 @@ class PosenetActivity :
    */
   private fun openCamera() {
     val permissionCamera = getContext()!!.checkPermission(
-      Manifest.permission.CAMERA, Process.myPid(), Process.myUid()
+            Manifest.permission.CAMERA, Process.myPid(), Process.myUid()
     )
     if (permissionCamera != PackageManager.PERMISSION_GRANTED) {
       requestCameraPermission()
@@ -379,21 +379,21 @@ class PosenetActivity :
       fillBytes(image.planes, yuvBytes)
 
       ImageUtils.convertYUV420ToARGB8888(
-        yuvBytes[0]!!,
-        yuvBytes[1]!!,
-        yuvBytes[2]!!,
-        previewWidth,
-        previewHeight,
-        /*yRowStride=*/ image.planes[0].rowStride,
-        /*uvRowStride=*/ image.planes[1].rowStride,
-        /*uvPixelStride=*/ image.planes[1].pixelStride,
-        rgbBytes
+              yuvBytes[0]!!,
+              yuvBytes[1]!!,
+              yuvBytes[2]!!,
+              previewWidth,
+              previewHeight,
+              /*yRowStride=*/ image.planes[0].rowStride,
+              /*uvRowStride=*/ image.planes[1].rowStride,
+              /*uvPixelStride=*/ image.planes[1].pixelStride,
+              rgbBytes
       )
 
       // Create bitmap from int array
       val imageBitmap = Bitmap.createBitmap(
-        rgbBytes, previewWidth, previewHeight,
-        Bitmap.Config.ARGB_8888
+              rgbBytes, previewWidth, previewHeight,
+              Bitmap.Config.ARGB_8888
       )
 
       // Create rotated version for portrait display
@@ -401,8 +401,8 @@ class PosenetActivity :
       rotateMatrix.postRotate(90.0f)
 
       val rotatedBitmap = Bitmap.createBitmap(
-        imageBitmap, 0, 0, previewWidth, previewHeight,
-        rotateMatrix, true
+              imageBitmap, 0, 0, previewWidth, previewHeight,
+              rotateMatrix, true
       )
       image.close()
 
@@ -426,21 +426,21 @@ class PosenetActivity :
         // New image is taller so we are height constrained.
         val cropHeight = bitmap.height - (bitmap.width.toFloat() / modelInputRatio)
         croppedBitmap = Bitmap.createBitmap(
-          bitmap,
-          0,
-          (cropHeight / 2).toInt(),
-          bitmap.width,
-          (bitmap.height - cropHeight).toInt()
+                bitmap,
+                0,
+                (cropHeight / 2).toInt(),
+                bitmap.width,
+                (bitmap.height - cropHeight).toInt()
         )
       }
       else -> {
         val cropWidth = bitmap.width - (bitmap.height.toFloat() * modelInputRatio)
         croppedBitmap = Bitmap.createBitmap(
-          bitmap,
-          (cropWidth / 2).toInt(),
-          0,
-          (bitmap.width - cropWidth).toInt(),
-          bitmap.height
+                bitmap,
+                (cropWidth / 2).toInt(),
+                0,
+                (bitmap.width - cropWidth).toInt(),
+                bitmap.height
         )
       }
     }
@@ -449,7 +449,7 @@ class PosenetActivity :
 
   /** Set the paint color and size.    */
   private fun setPaint() {
-    paint.color = Color.RED
+    paint.color = Color.GREEN
     paint.textSize = 80.0f
     paint.strokeWidth = 8.0f
   }
@@ -468,7 +468,7 @@ class PosenetActivity :
       screenWidth = canvas.width
       screenHeight = canvas.width
       left = 0
-      top = (canvas.height - canvas.width) / 2
+      top = 0
     } else {
       screenWidth = canvas.height
       screenHeight = canvas.height
@@ -480,36 +480,36 @@ class PosenetActivity :
 
     setPaint()
     canvas.drawBitmap(
-      bitmap,
-      Rect(0, 0, bitmap.width, bitmap.height),
-      Rect(left, top, right, bottom),
-      paint
+            bitmap,
+            Rect(0, 0, bitmap.width, bitmap.height),
+            Rect(left, top, right, bottom),
+            paint
     )
 
     val widthRatio = screenWidth.toFloat() / MODEL_WIDTH
     val heightRatio = screenHeight.toFloat() / MODEL_HEIGHT
 
     // Draw key points over the image.
-    for (keyPoint in person.keyPoints) {
-      if (keyPoint.score > minConfidence) {
-        val position = keyPoint.position
-        val adjustedX: Float = position.x.toFloat() * widthRatio + left
-        val adjustedY: Float = position.y.toFloat() * heightRatio + top
-        canvas.drawCircle(adjustedX, adjustedY, circleRadius, paint)
-      }
-    }
+//    for (keyPoint in person.keyPoints) {
+//      if (keyPoint.score > minConfidence) {
+//        val position = keyPoint.position
+//        val adjustedX: Float = position.x.toFloat() * widthRatio + left
+//        val adjustedY: Float = position.y.toFloat() * heightRatio + top
+//        canvas.drawCircle(adjustedX, adjustedY, circleRadius, paint)
+//      }
+//    }
 
     for (line in bodyJoints) {
       if (
-        (person.keyPoints[line.first.ordinal].score > minConfidence) and
-        (person.keyPoints[line.second.ordinal].score > minConfidence)
+              (person.keyPoints[line.first.ordinal].score > minConfidence) and
+              (person.keyPoints[line.second.ordinal].score > minConfidence)
       ) {
         canvas.drawLine(
-          person.keyPoints[line.first.ordinal].position.x.toFloat() * widthRatio + left,
-          person.keyPoints[line.first.ordinal].position.y.toFloat() * heightRatio + top,
-          person.keyPoints[line.second.ordinal].position.x.toFloat() * widthRatio + left,
-          person.keyPoints[line.second.ordinal].position.y.toFloat() * heightRatio + top,
-          paint
+                person.keyPoints[line.first.ordinal].position.x.toFloat() * widthRatio + left,
+                person.keyPoints[line.first.ordinal].position.y.toFloat() * heightRatio + top,
+                person.keyPoints[line.second.ordinal].position.x.toFloat() * widthRatio + left,
+                person.keyPoints[line.second.ordinal].position.y.toFloat() * heightRatio + top,
+                paint
         )
       }
     }
@@ -517,48 +517,48 @@ class PosenetActivity :
     val O = person.keyPoints[BodyPart.LEFT_SHOULDER.ordinal]
     val P = person.keyPoints[BodyPart.LEFT_HIP.ordinal]
     val Q = person.keyPoints[BodyPart.LEFT_KNEE.ordinal]
-    if(O.score > minConfidence && P.score > minConfidence && Q.score > minConfidence){
-        val oq = sqrt(
-          (O.position.x - Q.position.x).toDouble().pow(2.0)
-           + (O.position.y - Q.position.y).toDouble().pow(2.0)
-        )
-        val op = sqrt(
-          (O.position.x - P.position.x).toDouble().pow(2.0)
-           + (O.position.y - P.position.y).toDouble().pow(2.0)
-        )
-        val pq = sqrt(
-          (P.position.x - Q.position.x).toDouble().pow(2.0)
-           + (P.position.y - Q.position.y).toDouble().pow(2.0)
-        )
+    if(O.score > minConfidence && P.score > minConfidence && Q.score > minConfidence) {
+      PERSON = true
+      val oq = sqrt(
+              (O.position.x - Q.position.x).toDouble().pow(2.0)
+                      + (O.position.y - Q.position.y).toDouble().pow(2.0)
+      )
+      val op = sqrt(
+              (O.position.x - P.position.x).toDouble().pow(2.0)
+                      + (O.position.y - P.position.y).toDouble().pow(2.0)
+      )
+      val pq = sqrt(
+              (P.position.x - Q.position.x).toDouble().pow(2.0)
+                      + (P.position.y - Q.position.y).toDouble().pow(2.0)
+      )
 
-        if(op<1 || pq <1)
-          angle = 0.0
-        else{
-          val temp = (op.pow(2.0) + pq.pow(2.0) - oq.pow(2.0)) / (2 * op * pq)
+      if (op < 1 || pq < 1)
+        angle = 0.0
+      else {
+        val temp = (op.pow(2.0) + pq.pow(2.0) - oq.pow(2.0)) / (2 * op * pq)
 
-          angle = kotlin.math.acos(temp)
-          angle = (angle * (180 / Math.PI))
+        angle = kotlin.math.acos(temp)
+        angle = (angle * (180 / Math.PI))
 
-          if(O.position.x != P.position.x){
-            val a = (P.position.y - O.position.y) / (P.position.x - O.position.x)
-            val b = (P.position.x * O.position.y - O.position.x * P.position.y) / (P.position.x - O.position.x)
-            val y = a * Q.position.x + b
+        if (O.position.x != P.position.x) {
+          val a = (P.position.y - O.position.y) / (P.position.x - O.position.x)
+          val b =
+                  (P.position.x * O.position.y - O.position.x * P.position.y) / (P.position.x - O.position.x)
+          val y = a * Q.position.x + b
 
-            if(a > 0){
-              if(Q.position.y > y)
-                angle = 360.0f - angle
-            }
-            else{
-              if(Q.position.y < y)
-                angle = 360.0f - angle
-            }
-
-          }
-          else{
-            if(Q.position.x < P.position.x)
+          if (a > 0) {
+            if (Q.position.y > y)
+              angle = 360.0f - angle
+          } else {
+            if (Q.position.y < y)
               angle = 360.0f - angle
           }
-          angle = 360 - round(angle)
+
+        } else {
+          if (Q.position.x < P.position.x)
+            angle = 360.0f - angle
+        }
+        angle = 360 - round(angle)
       }
     }
     if(angle < 120 && squart == true){
@@ -570,18 +570,28 @@ class PosenetActivity :
       squart = false
     }
     else if(angle > 120 && squart == false){
+      val Count = view!!.findViewById<TextView>(R.id.count)
       cnt += 1
       if(cnt==1){
+        activity?.runOnUiThread(Runnable {
+          Count.text = "  1"
+        })
         var mediaPlayer = MediaPlayer.create(context, R.raw.one).start()
       }
       if(cnt==2){
+        activity?.runOnUiThread(Runnable {
+          Count.text = "  2"
+        })
         var mediaPlayer = MediaPlayer.create(context, R.raw.two).start()
       }
       if(cnt==3){
+        activity?.runOnUiThread(Runnable {
+          Count.text = "  3"
+        })
         var mediaPlayer = MediaPlayer.create(context, R.raw.three).start()
         val E = activity?.intent?.getParcelableExtra<Schedule>("E")
         AppDatabase.getInstance(context).schedule().update(
-          Schedule(E!!.id, E.year, E.month, E.day, E.exerciseId, E.set, E.rep, !E.done)
+                Schedule(E!!.id, E.year, E.month, E.day, E.exerciseId, E.set, E.rep, !E.done)
         )
 
         activity?.startActivity(Intent(context,TodayExerciseActivity::class.java))
@@ -620,25 +630,32 @@ class PosenetActivity :
       bent = false
     }
 
-    canvas.drawText(
-      "Cnt: %d, Angle:%.2f".format(cnt, angle),
-      (15.0f * widthRatio),
-      (30.0f * heightRatio + bottom),
-      paint
-    )
-    canvas.drawText(
-      "Device: %s".format(squart),
-      (15.0f * widthRatio),
-      (50.0f * heightRatio + bottom),
-      paint
-    )
-
-    canvas.drawText(
-      "Time: %.2f ms".format(posenet.lastInferenceTimeNanos * 1.0f / 1_000_000),
-      (15.0f * widthRatio),
-      (70.0f * heightRatio + bottom),
-      paint
-    )
+    if(PERSON == false){
+      canvas.drawText(
+              "                더 뒤로 물러나세요".format(cnt, angle),
+              (15.0f * widthRatio),
+              (30.0f * heightRatio + bottom),
+              paint
+      )
+    }
+    else {
+      if(cnt == 0) {
+        canvas.drawText(
+                "                     시작하세요".format(cnt, angle),
+                (15.0f * widthRatio),
+                (30.0f * heightRatio + bottom),
+                paint
+        )
+      }
+      else{
+        canvas.drawText(
+                "                         화이팅".format(cnt, angle),
+                (15.0f * widthRatio),
+                (30.0f * heightRatio + bottom),
+                paint
+        )
+      }
+    }
 
     // Draw!
     surfaceHolder?.unlockCanvasAndPost(canvas)
@@ -666,7 +683,7 @@ class PosenetActivity :
     try {
       // We capture images from preview in YUV format.
       imageReader = ImageReader.newInstance(
-        previewSize!!.width, previewSize!!.height, ImageFormat.YUV_420_888, 2
+              previewSize!!.width, previewSize!!.height, ImageFormat.YUV_420_888, 2
       )
       imageReader!!.setOnImageAvailableListener(imageAvailableListener, backgroundHandler)
 
@@ -675,45 +692,45 @@ class PosenetActivity :
 
       // We set up a CaptureRequest.Builder with the output Surface.
       previewRequestBuilder = cameraDevice!!.createCaptureRequest(
-        CameraDevice.TEMPLATE_PREVIEW
+              CameraDevice.TEMPLATE_PREVIEW
       )
       previewRequestBuilder!!.addTarget(recordingSurface)
 
       // Here, we create a CameraCaptureSession for camera preview.
       cameraDevice!!.createCaptureSession(
-        listOf(recordingSurface),
-        object : CameraCaptureSession.StateCallback() {
-          override fun onConfigured(cameraCaptureSession: CameraCaptureSession) {
-            // The camera is already closed
-            if (cameraDevice == null) return
+              listOf(recordingSurface),
+              object : CameraCaptureSession.StateCallback() {
+                override fun onConfigured(cameraCaptureSession: CameraCaptureSession) {
+                  // The camera is already closed
+                  if (cameraDevice == null) return
 
-            // When the session is ready, we start displaying the preview.
-            captureSession = cameraCaptureSession
-            try {
-              // Auto focus should be continuous for camera preview.
-              previewRequestBuilder!!.set(
-                CaptureRequest.CONTROL_AF_MODE,
-                CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE
-              )
-              // Flash is automatically enabled when necessary.
-              setAutoFlash(previewRequestBuilder!!)
+                  // When the session is ready, we start displaying the preview.
+                  captureSession = cameraCaptureSession
+                  try {
+                    // Auto focus should be continuous for camera preview.
+                    previewRequestBuilder!!.set(
+                            CaptureRequest.CONTROL_AF_MODE,
+                            CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE
+                    )
+                    // Flash is automatically enabled when necessary.
+                    setAutoFlash(previewRequestBuilder!!)
 
-              // Finally, we start displaying the camera preview.
-              previewRequest = previewRequestBuilder!!.build()
-              captureSession!!.setRepeatingRequest(
-                previewRequest!!,
-                null, null
-              )
-            } catch (e: CameraAccessException) {
-              Log.e(TAG, e.toString())
-            }
-          }
+                    // Finally, we start displaying the camera preview.
+                    previewRequest = previewRequestBuilder!!.build()
+                    captureSession!!.setRepeatingRequest(
+                            previewRequest!!,
+                            null, null
+                    )
+                  } catch (e: CameraAccessException) {
+                    Log.e(TAG, e.toString())
+                  }
+                }
 
-          override fun onConfigureFailed(cameraCaptureSession: CameraCaptureSession) {
-            showToast("Failed")
-          }
-        },
-        null
+                override fun onConfigureFailed(cameraCaptureSession: CameraCaptureSession) {
+                  showToast("Failed")
+                }
+              },
+              null
       )
     } catch (e: CameraAccessException) {
       Log.e(TAG, e.toString())
@@ -723,8 +740,8 @@ class PosenetActivity :
   private fun setAutoFlash(requestBuilder: CaptureRequest.Builder) {
     if (flashSupported) {
       requestBuilder.set(
-        CaptureRequest.CONTROL_AE_MODE,
-        CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH
+              CaptureRequest.CONTROL_AE_MODE,
+              CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH
       )
     }
   }
@@ -735,10 +752,10 @@ class PosenetActivity :
   class ErrorDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
-      AlertDialog.Builder(activity)
-        .setMessage(arguments!!.getString(ARG_MESSAGE))
-        .setPositiveButton(android.R.string.ok) { _, _ -> activity!!.finish() }
-        .create()
+            AlertDialog.Builder(activity)
+                    .setMessage(arguments!!.getString(ARG_MESSAGE))
+                    .setPositiveButton(android.R.string.ok) { _, _ -> activity!!.finish() }
+                    .create()
 
     companion object {
 

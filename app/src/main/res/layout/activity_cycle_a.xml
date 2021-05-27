@@ -7,12 +7,16 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
+
         android:text="사이클 A"
         android:textSize="30sp"
         android:gravity="center"
-        android:background="@color/purple_200"
+        android:background="@color/my_blue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,75 +25,60 @@
         android:id="@+id/mon"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="월요일 : 스쿼트, 풀업"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
+        android:textStyle="bold"
+        android:gravity=""
+        android:text="  월요일 : 스쿼트, 풀업"
         android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="25dp"
+        android:textColor="@color/my_blue"
+        android:background="@color/white"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
-    <TextView
-        android:id="@+id/tue"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="화요일 : 휴식"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mon" />
+
     <TextView
         android:id="@+id/wed"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="수요일 : 스쿼트, 푸쉬업"
+        android:textColor="@color/my_blue"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
+        android:background="@color/white"
+        android:gravity=""
+        android:textStyle="bold"
+        android:text="  수요일 : 스쿼트, 푸쉬업"
         android:textSize="30sp"
-        android:textColor="@color/black"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tue" />
+        app:layout_constraintTop_toBottomOf="@id/mon" />
+
+
 
     <TextView
-        android:id="@+id/thu"
+        android:id="@+id/fri"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="목요일 : 휴식"
+        android:gravity=""
+        android:text="  금요일 : 풀업, 푸쉬업"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/my_blue"
+        android:background="@color/white"
+        android:textStyle="bold"
+
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wed" />
 
     <TextView
-        android:id="@+id/fri"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_200"
-        android:gravity="center"
-        android:text="금요일 : 풀업, 푸쉬업"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/thu" />
-
-    <TextView
         android:id="@+id/textView3"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:text="세트 수는 10, 반복 횟수는 10입니다."
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,12 +86,16 @@
 
     <Button
         android:id="@+id/btn_enroll"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
+        android:layout_margin="30dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:text="등록"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/btn_radius"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

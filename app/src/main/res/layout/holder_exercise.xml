@@ -8,6 +8,10 @@
         android:id="@+id/exercise_name_text_view"
         android:textSize="40sp"
         android:gravity="center"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
+        android:background="@color/white"
+        android:textColor="@color/my_blue"
+        android:textStyle="bold"
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

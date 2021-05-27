@@ -9,13 +9,13 @@ com/taetae98/iip/activity/Exercise_TIP/Tip/tip_pullup.java
  com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pullup
 com/taetae98/iip/dto/Exercise.java
  com.taetae98.iip.dto.Exercise
+com/taetae98/iip/dto/Schedule.java
+ com.taetae98.iip.dto.Schedule
+ com.taetae98.iip.dto.Schedule$1
 com/taetae98/iip/activity/cycle_c.java
  com.taetae98.iip.activity.cycle_c
 com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager/Fragment/Squat_Frag2.java
  com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Squat_Frag2
-com/taetae98/iip/dto/Schedule.java
- com.taetae98.iip.dto.Schedule
- com.taetae98.iip.dto.Schedule$1
 com/taetae98/iip/activity/Exercise_TIP/Tip/tip_squat.java
  com.taetae98.iip.activity.Exercise_TIP.Tip.tip_squat
 com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager/Fragment/Pushup_Frag3.java
@@ -82,9 +82,9 @@ com/taetae98/iip/base/BaseAdapter.java
  com.taetae98.iip.base.BaseAdapter
 com/taetae98/iip/BuildConfig.java
  com.taetae98.iip.BuildConfig
-com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager/Fragment/Pushup_Frag1.java
- com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Pushup_Frag1
 com/taetae98/iip/base/BaseHolder.java
  com.taetae98.iip.base.BaseHolder
+com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager/Fragment/Pushup_Frag1.java
+ com.taetae98.iip.activity.Exercise_TIP.Tip.ViewPager.Fragment.Pushup_Frag1
 com/taetae98/iip/dao/ScheduleDao.java
  com.taetae98.iip.dao.ScheduleDao

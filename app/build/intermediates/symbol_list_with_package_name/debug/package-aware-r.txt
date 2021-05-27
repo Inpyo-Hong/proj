@@ -1122,6 +1122,8 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color my_blue
+color my_blue1
 color my_purple
 color notification_action_color_filter
 color notification_icon_bg_color
@@ -1646,6 +1648,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable btn_radius
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1663,6 +1666,8 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon
 drawable icon_exercise
+drawable logo_small
+drawable logo_small_1
 drawable main
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1705,6 +1710,7 @@ drawable pushup_wrong_1
 drawable pushup_wrong_2
 drawable pushup_wrong_3
 drawable pushupmethod
+drawable round
 drawable splash
 drawable squat
 drawable squat2
@@ -1714,6 +1720,9 @@ drawable squat_knee
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font font
+font tmoneyroundwindextrabold
+font tmoneyroundwindregular
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1840,6 +1849,7 @@ id contentPanel
 id contiguous
 id coordinator
 id cos
+id count
 id counterclockwise
 id custom
 id customPanel
@@ -2133,7 +2143,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id thu
 id time
 id tip_button
 id tip_text_view
@@ -2154,7 +2163,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tue
 id unchecked
 id uniform
 id unlabeled
