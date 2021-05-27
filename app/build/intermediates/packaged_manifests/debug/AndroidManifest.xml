@@ -24,27 +24,27 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Iip" >
-        <activity android:name="com.taetae98.iip.activity.Camera.CameraActivity" />
-        <activity android:name="com.taetae98.iip.activity.TodayExerciseActivity" />
-        <activity android:name="com.taetae98.iip.activity.cycle_a" />
-        <activity android:name="com.taetae98.iip.activity.cycle_b" />
-        <activity android:name="com.taetae98.iip.activity.cycle_c" />
-        <activity android:name="com.taetae98.iip.activity.cycle_d" />
-        <activity android:name="com.taetae98.iip.activity.ExerciseInformationActivity" />
-        <activity android:name="com.taetae98.iip.activity.TipActivity" />
-        <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
-        <activity android:name="com.taetae98.iip.activity.ExerciseActivity" />
-        <activity android:name="com.taetae98.iip.activity.MainActivity" />
-        <activity android:name="com.taetae98.iip.activity.SplashActivity" >
+        <activity android:name="com.project.iip.activity.Camera.CameraActivity" />
+        <activity android:name="com.project.iip.activity.TodayExerciseActivity" />
+        <activity android:name="com.project.iip.activity.cycle_a" />
+        <activity android:name="com.project.iip.activity.cycle_b" />
+        <activity android:name="com.project.iip.activity.cycle_c" />
+        <activity android:name="com.project.iip.activity.cycle_d" />
+        <activity android:name="com.project.iip.activity.ExerciseInformationActivity" />
+        <activity android:name="com.project.iip.activity.TipActivity" />
+        <activity android:name="com.project.iip.activity.RoutineActivity" />
+        <activity android:name="com.project.iip.activity.ExerciseActivity" />
+        <activity android:name="com.project.iip.activity.MainActivity" />
+        <activity android:name="com.project.iip.activity.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pullup" />
-        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pushup" />
-        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_squat" />
+        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_pullup" />
+        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_pushup" />
+        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_squat" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

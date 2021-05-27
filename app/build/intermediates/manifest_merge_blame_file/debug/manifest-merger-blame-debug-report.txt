@@ -40,42 +40,42 @@
 25        android:testOnly="true"
 26        android:theme="@style/Theme.Iip" >
 26-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:16:9-41
-27        <activity android:name="com.taetae98.iip.activity.Camera.CameraActivity" />
-27-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:9-77
-27-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:19-65
-28        <activity android:name="com.taetae98.iip.activity.TodayExerciseActivity" />
-28-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:9-77
-28-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:19-65
-29        <activity android:name="com.taetae98.iip.activity.cycle_a" />
-29-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:9-63
-29-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:19-51
-30        <activity android:name="com.taetae98.iip.activity.cycle_b" />
-30-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:9-63
-30-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:19-51
-31        <activity android:name="com.taetae98.iip.activity.cycle_c" />
-31-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:9-63
-31-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:19-51
-32        <activity android:name="com.taetae98.iip.activity.cycle_d" />
-32-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:9-63
-32-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:19-51
-33        <activity android:name="com.taetae98.iip.activity.ExerciseInformationActivity" />
-33-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:9-74
-33-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:19-71
-34        <activity android:name="com.taetae98.iip.activity.TipActivity" />
-34-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:9-58
-34-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:19-55
-35        <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
-35-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:9-62
-35-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:19-59
-36        <activity android:name="com.taetae98.iip.activity.ExerciseActivity" />
-36-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:9-63
-36-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:19-60
-37        <activity android:name="com.taetae98.iip.activity.MainActivity" />
-37-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:9-58
-37-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:19-56
-38        <activity android:name="com.taetae98.iip.activity.SplashActivity" >
+27        <activity android:name="com.project.iip.activity.Camera.CameraActivity" />
+27-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:9-92
+27-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:19-80
+28        <activity android:name="com.project.iip.activity.TodayExerciseActivity" />
+28-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:9-92
+28-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:19-80
+29        <activity android:name="com.project.iip.activity.cycle_a" />
+29-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:9-78
+29-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:19-66
+30        <activity android:name="com.project.iip.activity.cycle_b" />
+30-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:9-78
+30-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:19-66
+31        <activity android:name="com.project.iip.activity.cycle_c" />
+31-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:9-78
+31-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:19-66
+32        <activity android:name="com.project.iip.activity.cycle_d" />
+32-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:9-78
+32-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:19-66
+33        <activity android:name="com.project.iip.activity.ExerciseInformationActivity" />
+33-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:9-89
+33-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:19-86
+34        <activity android:name="com.project.iip.activity.TipActivity" />
+34-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:9-73
+34-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:19-70
+35        <activity android:name="com.project.iip.activity.RoutineActivity" />
+35-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:9-77
+35-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:19-74
+36        <activity android:name="com.project.iip.activity.ExerciseActivity" />
+36-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:9-78
+36-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:19-75
+37        <activity android:name="com.project.iip.activity.MainActivity" />
+37-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:9-73
+37-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:19-71
+38        <activity android:name="com.project.iip.activity.SplashActivity" >
 38-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:9-34:20
-38-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:19-58
+38-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:19-73
 39            <intent-filter>
 39-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:29:13-33:29
 40                <action android:name="android.intent.action.MAIN" />
@@ -87,15 +87,15 @@
 42-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:32:27-74
 43            </intent-filter>
 44        </activity>
-45        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pullup" />
-45-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:9-73
-45-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:19-71
-46        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pushup" />
-46-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:9-73
-46-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:19-71
-47        <activity android:name="com.taetae98.iip.activity.Exercise_TIP.Tip.tip_squat" />
-47-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:9-72
-47-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:19-70
+45        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_pullup" />
+45-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:9-88
+45-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:19-86
+46        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_pushup" />
+46-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:9-88
+46-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:19-86
+47        <activity android:name="com.project.iip.activity.Exercise_TIP.Tip.tip_squat" />
+47-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:9-87
+47-->/Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:19-85
 48
 49        <service
 49-->[androidx.room:room-runtime:2.3.0] /Users/inpyohong/.gradle/caches/transforms-2/files-2.1/23021fc999cd5428657e982bc13e7b31/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40

@@ -48,7 +48,7 @@ INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:2:1
 INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:2:1-40:12
 INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:3:5-31
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:3:5-30
 		INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -103,54 +103,54 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/inpy
 		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
 		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:16:9-41
-activity#com.taetae98.iip.activity.Camera.CameraActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:9-77
+activity#com.project.iip.activity.Camera.CameraActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:9-92
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:19-65
-activity#com.taetae98.iip.activity.TodayExerciseActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:9-77
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:17:19-80
+activity#com.project.iip.activity.TodayExerciseActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:9-92
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:19-65
-activity#com.taetae98.iip.activity.cycle_a
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:9-63
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:18:19-80
+activity#com.project.iip.activity.cycle_a
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:9-78
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:19-51
-activity#com.taetae98.iip.activity.cycle_b
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:9-63
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:19:19-66
+activity#com.project.iip.activity.cycle_b
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:9-78
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:19-51
-activity#com.taetae98.iip.activity.cycle_c
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:9-63
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:20:19-66
+activity#com.project.iip.activity.cycle_c
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:9-78
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:19-51
-activity#com.taetae98.iip.activity.cycle_d
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:9-63
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:21:19-66
+activity#com.project.iip.activity.cycle_d
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:9-78
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:19-51
-activity#com.taetae98.iip.activity.ExerciseInformationActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:9-74
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:22:19-66
+activity#com.project.iip.activity.ExerciseInformationActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:9-89
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:19-71
-activity#com.taetae98.iip.activity.TipActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:9-58
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:23:19-86
+activity#com.project.iip.activity.TipActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:9-73
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:19-55
-activity#com.taetae98.iip.activity.RoutineActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:9-62
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:24:19-70
+activity#com.project.iip.activity.RoutineActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:9-77
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:19-59
-activity#com.taetae98.iip.activity.ExerciseActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:9-63
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:25:19-74
+activity#com.project.iip.activity.ExerciseActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:9-78
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:19-60
-activity#com.taetae98.iip.activity.MainActivity
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:9-58
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:26:19-75
+activity#com.project.iip.activity.MainActivity
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:9-73
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:19-56
-activity#com.taetae98.iip.activity.SplashActivity
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:27:19-71
+activity#com.project.iip.activity.SplashActivity
 ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:9-34:20
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:19-58
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:28:19-73
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
@@ -161,18 +161,18 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
 		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:32:27-74
-activity#com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pullup
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:9-73
+activity#com.project.iip.activity.Exercise_TIP.Tip.tip_pullup
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:9-88
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:19-71
-activity#com.taetae98.iip.activity.Exercise_TIP.Tip.tip_pushup
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:9-73
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:35:19-86
+activity#com.project.iip.activity.Exercise_TIP.Tip.tip_pushup
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:9-88
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:19-71
-activity#com.taetae98.iip.activity.Exercise_TIP.Tip.tip_squat
-ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:9-72
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:36:19-86
+activity#com.project.iip.activity.Exercise_TIP.Tip.tip_squat
+ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:9-87
 	android:name
-		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:19-70
+		ADDED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml:37:19-85
 uses-sdk
 INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/inpyohong/Desktop/proj/app/src/main/AndroidManifest.xml

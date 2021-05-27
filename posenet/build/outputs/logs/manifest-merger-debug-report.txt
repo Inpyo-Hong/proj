@@ -8,7 +8,7 @@ INJECTED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml
 INJECTED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml:1:1-6:12
 INJECTED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml:1:1-6:12
 	package
-		ADDED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml:2:3-29
+		ADDED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml:2:3-28
 		INJECTED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml
 		INJECTED from /Users/inpyohong/Desktop/proj/posenet/src/main/AndroidManifest.xml
 	android:versionName
