@@ -44,12 +44,12 @@
         "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/layout/pullup_frag_1.xml"
     },
     {
-        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_three.mp3.flat",
-        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/three.mp3"
-    },
-    {
         "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/raw_three.mp3.flat",
+        "source": "/Users/inpyohong/Desktop/proj/app/src/main/res/raw/three.mp3"
     },
     {
         "merged": "/Users/inpyohong/Desktop/proj/app/build/intermediates/res/merged/debug/drawable-v24_icon_exercise.jpg.flat",

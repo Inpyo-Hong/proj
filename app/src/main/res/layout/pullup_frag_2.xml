@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pull up 종류"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:layout_marginBottom="20dp"
@@ -37,6 +38,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="1.풀업(오버 그립)\n "/>
             <ImageView
                 android:layout_width="300dp"
@@ -51,6 +53,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="손등을 자신의 몸 방향으로 한 채 바를 잡는 방식으로 상체가 뒤로 빠지거나 흔들리지 않도록 하며 올라갈 때 보다 천천히 내려온다."/>
 
             <TextView
@@ -59,6 +62,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="2. 친업 (언더 그립)\n "/>
@@ -74,6 +78,7 @@
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="손바닥이 자신의 몸쪽으로 한 채 바를 잡는 방식으로 풀업보다 상대적으로 쉬운 편에 속하며 풀업으로는 자극을 주지 못하는 광배근 하부 운동에 도움이 된다."/>
 
 

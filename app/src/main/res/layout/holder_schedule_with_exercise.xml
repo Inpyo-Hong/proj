@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -13,10 +14,10 @@
             android:id="@+id/name_text_view"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
             android:gravity="center"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="Suspicious0dp" />
         <TextView
             android:id="@+id/set_text_view"
             android:layout_width="20dp"
@@ -29,7 +30,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:textAlignment="center"
-            android:text="번째 세트 /"
+            android:text="번 세트 /"
             android:layout_marginRight="10dp"
             android:textSize="15sp"/>
         <TextView
@@ -37,7 +38,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:textAlignment="center"
-            android:text=" 반복 횟수 : "
+            android:text="반복 횟수 : "
             android:textSize="15sp"/>
         <TextView
             android:id="@+id/rep_text_view"
@@ -50,8 +51,9 @@
 
         <Button
             android:id="@+id/btn_posenet"
-            android:layout_width="85dp"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginRight="5dp"
             android:text="Start" />
     </LinearLayout>
 

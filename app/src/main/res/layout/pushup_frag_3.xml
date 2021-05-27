@@ -16,6 +16,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="잘못된 운동자세"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
@@ -28,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -45,6 +47,7 @@
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:layout_marginBottom="10dp"
                 android:text="엉덩이 위치가 놓고 상체만 내려가면, 상체게 체중이 쏠리기 때문에 어깨 통증이나 팔꿈치, 손목 등이 부상 위험에 노출된다. 또한, 자세가 부정확해서 운동 효과도 떨어진다. 따라서 어깨가 팔과 일직선 상에 있는지 확인하고, 팔을 굽힐 때 몸 전체를 바닥을 향해 내려가도록 해야 한다."/>
 
@@ -55,6 +58,7 @@
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:textStyle="bold"
                 android:text="2. 낮은 엉덩이 위치\n "/>
             <ImageView
@@ -71,6 +75,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="엉덩이가 먼저 바닥을 향해 낮춰지며 자세가 흐트러지는 경우에 해당하는데, 근력이 부족하거나 너무 무리한 운동으로 더 이상 상체가 내려갈 힘이 없을 때 발생할 수 있다. 상체 근육을 포함하여 복근과 등 근육을 골고루 발달시키기 위해 몸 전체가 동시에 내려갈 수 있도록 신경 써야 한다."/>
 
             <TextView
@@ -81,6 +86,7 @@
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 android:textSize="16sp"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:textStyle="bold"
                 android:text="3. 팔꿈치의 벌어짐\n "/>
             <ImageView
@@ -97,6 +103,7 @@
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="팔꿈치가 몸통에서부터 너무 멀어지면, 어깨와 팔꿈치, 손목 등에 통증을 유발할 수 있어서 주의가 필요하다. 근력이 부족한 사람에게는 부상의 원인이 되기도 하니 팔꿈치의 위치를 생각하며 운동하는것이 중요하다."/>
 
         </LinearLayout>

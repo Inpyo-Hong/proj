@@ -23,6 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="Push up 종류"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -35,6 +36,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="1. Standard Push-up\n "/>
@@ -46,6 +48,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="푸쉬업의 가장 기본이 되는 자세로 손은 어깨 넓이로 벌리고 숨을 들이마시면서 바닥에 닿기 직전까지 팔을 구부리고 1~2초간 정지 후 숨을 내쉬면서 팔을 힘껏 올린다. 반복 20회 이상 가능 할 경우 속도를 늦추면 더욱 효과적이다."/>
 
             <TextView
@@ -54,6 +57,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="2. Incline Push-up\n "/>
@@ -64,11 +68,13 @@
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:text="의자 , 벤치 등 바닥보다 높은 물체에 손을 지탱한체 하는 푸쉬업 동작이다. 가슴 하부를 자극하는 운동으로, 체중을 하체제에서 지탠해 주기 때문에 스탠다드보다 수월하다."/>
+                android:fontFamily="@font/tmoneyroundwindregular"
+                android:text="의자 , 벤치 등 바닥보다 높은 물체에 손을 지탱한체 하는 푸쉬업 동작이다. 가슴 하부를 자극하는 운동으로, 체중을 하체에서 지탠해 주기 때문에 스탠다드보다 수월하다."/>
 
 
             <TextView
                 android:layout_width="match_parent"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
@@ -85,6 +91,7 @@
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="일반 푸쉬업과 비슷하지만, 손의 보폭이 넓다는 차이점이 있다. 주 운동 부위는 가슴 바깥근육(대흉근), 삼각근(어깨근육), 삼두근, 등근육으로 일반 푸쉬업에서 손의 넓이를 1.5배 가량 더 넓게 잡아주는 것이 포인트이다."/>
 
         </LinearLayout>

@@ -10,11 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="사이클을 선택하세요!"
+            android:text="  사이클을 선택하세요!"
             android:textSize="30sp"
             android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:fontFamily="@font/tmoneyroundwindextrabold"
+            android:layout_height="140dp"
             android:gravity="left|center"/>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -27,16 +28,18 @@
         android:id="@+id/btn_a"
         android:text="사이클 A"
         android:textSize="40sp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/btn_radius"
         android:layout_gravity="center"
         android:layout_width="300dp"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_b"
         android:text="사이클 B"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/btn_radius"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:textSize="40sp"
         android:layout_gravity="center"
         android:layout_marginTop="160dp"
@@ -45,9 +48,10 @@
     <Button
         android:id="@+id/btn_c"
         android:text="사이클 C"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/btn_radius"
         android:textSize="40sp"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:layout_gravity="center"
         android:layout_marginTop="320dp"
         android:layout_width="300dp"
@@ -57,9 +61,10 @@
         android:text="사이클 D"
         android:background="@drawable/btn_radius"
         android:textSize="40sp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="480dp"
+        android:fontFamily="@font/tmoneyroundwindextrabold"
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 

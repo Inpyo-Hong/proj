@@ -18,6 +18,7 @@
                 android:layout_width="300dp"
                 android:layout_height='300dp'
                 android:layout_marginTop="30dp"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:src="@drawable/pushup"
                 android:layout_gravity="center"/>
             <TextView
@@ -36,11 +37,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="체력장이나 공무원 시험 실기시험이나 경찰이나 군인 등과 같이 몸을 쓰는 직업의 체력검사 때 빠지지 않는 운동으로, 일정한 기준을 책정하기 위해 시간 제한을 두고 실행한다.거기에 종종 단체기합용으로도 사용하는 전천후 트레이닝 기술이다.\n\n"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="운동 순서"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -54,6 +57,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="30dp"
                 android:textColor="@color/black"
+                android:fontFamily="@font/tmoneyroundwindregular"
                 android:text="1.흔히 말하는 엎드러 뻗쳐 자세에서 고개를 든다.\n2. 어깨에서 발끝까지 일직선을 이루도록 몸을 고정한다.\n3. 팔꿈치를 굽혔다 펴는 것을 일정 횟수 반복한다."/>
 
         </LinearLayout>

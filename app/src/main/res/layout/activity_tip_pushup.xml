@@ -10,14 +10,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/my_purple"
+        android:background="@color/my_blue"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="푸쉬업(push-up) : 팔굽혀펴기"
+            android:layout_gravity="center"
+            android:fontFamily="@font/tmoneyroundwindextrabold"
+            android:text="푸쉬업(push-up)"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="30sp" />
     </LinearLayout>
@@ -39,16 +42,19 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="Monday" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="Tuesday" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/tmoneyroundwindextrabold"
                 android:text="Wednesday" />
         </com.google.android.material.tabs.TabLayout>
 

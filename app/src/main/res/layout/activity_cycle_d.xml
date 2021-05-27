@@ -32,7 +32,7 @@
         android:textSize="30sp"
         android:textColor="@color/my_blue"
         android:background="@color/white"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
@@ -48,7 +48,7 @@
         android:textStyle="bold"
         android:text="  수요일 : 스쿼트, 푸쉬업"
         android:textSize="30sp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mon" />
@@ -66,8 +66,7 @@
         android:textColor="@color/my_blue"
         android:background="@color/white"
         android:textStyle="bold"
-
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wed" />
@@ -78,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/tmoneyroundwindextrabold"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:layout_marginRight="30dp"
         android:text="세트 수는 10, 반복 횟수는 10입니다."
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,15 +88,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_radius"
         android:fontFamily="@font/tmoneyroundwindextrabold"
         android:text="등록"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:background="@drawable/btn_radius"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,14 +10,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/my_purple"
+        android:background="@color/my_blue"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="스쿼트(squat) : 앉았다일어나기"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/tmoneyroundwindextrabold"
+            android:text="스쿼트(squat)"
             android:textColor="@color/white"
             android:textSize="30sp" />
     </LinearLayout>
@@ -31,7 +34,7 @@
             android:id="@+id/tabLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/const_vp"
+            app:layout_constraintBottom_toTopOf="@+id/const_vp1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
