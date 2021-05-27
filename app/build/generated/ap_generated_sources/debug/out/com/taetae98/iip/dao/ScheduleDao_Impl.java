@@ -192,6 +192,61 @@ public final class ScheduleDao_Impl implements ScheduleDao {
     }
   }
 
+  @Override
+  public List<Schedule> selectWithDateAndExerciseId(final int year, final int month, final int day,
+      final long exerciseId) {
+    final String _sql = "SELECT * FROM Schedule WHERE year = ? AND month = ? AND day = ? AND exerciseId = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 4);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, year);
+    _argIndex = 2;
+    _statement.bindLong(_argIndex, month);
+    _argIndex = 3;
+    _statement.bindLong(_argIndex, day);
+    _argIndex = 4;
+    _statement.bindLong(_argIndex, exerciseId);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfYear = CursorUtil.getColumnIndexOrThrow(_cursor, "year");
+      final int _cursorIndexOfMonth = CursorUtil.getColumnIndexOrThrow(_cursor, "month");
+      final int _cursorIndexOfDay = CursorUtil.getColumnIndexOrThrow(_cursor, "day");
+      final int _cursorIndexOfExerciseId = CursorUtil.getColumnIndexOrThrow(_cursor, "exerciseId");
+      final int _cursorIndexOfSet = CursorUtil.getColumnIndexOrThrow(_cursor, "set");
+      final int _cursorIndexOfRep = CursorUtil.getColumnIndexOrThrow(_cursor, "rep");
+      final int _cursorIndexOfDone = CursorUtil.getColumnIndexOrThrow(_cursor, "done");
+      final List<Schedule> _result = new ArrayList<Schedule>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Schedule _item;
+        final long _tmpId;
+        _tmpId = _cursor.getLong(_cursorIndexOfId);
+        final int _tmpYear;
+        _tmpYear = _cursor.getInt(_cursorIndexOfYear);
+        final int _tmpMonth;
+        _tmpMonth = _cursor.getInt(_cursorIndexOfMonth);
+        final int _tmpDay;
+        _tmpDay = _cursor.getInt(_cursorIndexOfDay);
+        final long _tmpExerciseId;
+        _tmpExerciseId = _cursor.getLong(_cursorIndexOfExerciseId);
+        final int _tmpSet;
+        _tmpSet = _cursor.getInt(_cursorIndexOfSet);
+        final int _tmpRep;
+        _tmpRep = _cursor.getInt(_cursorIndexOfRep);
+        final boolean _tmpDone;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfDone);
+        _tmpDone = _tmp != 0;
+        _item = new Schedule(_tmpId,_tmpYear,_tmpMonth,_tmpDay,_tmpExerciseId,_tmpSet,_tmpRep,_tmpDone);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();
   }

@@ -11,16 +11,15 @@
 
         <TextView
             android:id="@+id/name_text_view"
-            android:textAlignment="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:gravity="center"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"/>
+            android:textAlignment="center"
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/set_text_view"
             android:layout_width="20dp"
-            android:layout_marginLeft="30dp"
             android:gravity="center"
             android:textAlignment="center"
             android:layout_height="40dp"
@@ -49,7 +48,6 @@
 
         <Button
             android:id="@+id/btn_posenet"
-            android:layout_marginLeft="20dp"
             android:layout_width="85dp"
             android:layout_height="40dp"
             android:text="Start" />

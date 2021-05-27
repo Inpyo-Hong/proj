@@ -1,4 +1,4 @@
-#Wed May 26 17:04:20 KST 2021
+#Thu May 27 12:53:21 KST 2021
 base.2=C\:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_0.dex
 path.2=classes_0.dex
 base.1=C\:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

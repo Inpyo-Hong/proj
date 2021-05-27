@@ -15,6 +15,7 @@ import com.taetae98.iip.R;
 import com.taetae98.iip.activity.Camera.CameraActivity;
 import com.taetae98.iip.base.BaseAdapter;
 import com.taetae98.iip.base.BaseHolder;
+import com.taetae98.iip.dto.Exercise;
 import com.taetae98.iip.dto.Schedule;
 import com.taetae98.iip.dto.ScheduleWithExercise;
 
@@ -34,6 +35,13 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
     public ScheduleWithExerciseAdapter() {
         super(itemCallback);
         setHasStableIds(true);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull BaseHolder<ScheduleWithExercise> holder, int position) {
+        ScheduleWithExercise scheduleWithExercise = getItem(position);
+        scheduleWithExercise.getSchedule().setSet(position + 1);
+        holder.bind(scheduleWithExercise);
     }
 
     @NonNull
@@ -56,7 +64,7 @@ public class ScheduleWithExerciseAdapter extends BaseAdapter<ScheduleWithExercis
         return R.layout.holder_schedule_with_exercise;
     }
 
-    static class ScheduleWithExerciseHolder extends BaseHolder<ScheduleWithExercise> {
+    public class ScheduleWithExerciseHolder extends BaseHolder<ScheduleWithExercise> {
         private Schedule E = null;
         private final TextView nameTextView;
         private final TextView setTextView;

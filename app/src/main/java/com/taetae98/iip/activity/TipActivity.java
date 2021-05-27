@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -27,7 +28,9 @@ public class TipActivity extends AppCompatActivity {
 
     private void onCreateRecyclerView() {
         AppDatabase.getInstance(this).exercise().select().observe(this, exerciseAdapter::submitList);
-        
+        exerciseAdapter.setOnExerciseClick(exercise -> {
+            startActivity(new Intent(this, ExerciseInformationActivity.class).putExtra("exercise", exercise));
+        });
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setAdapter(exerciseAdapter);
     }

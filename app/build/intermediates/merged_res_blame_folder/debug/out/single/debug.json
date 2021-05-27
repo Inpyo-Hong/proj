@@ -16,6 +16,10 @@
         "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_excercise_information.xml"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_routine.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\dialog_routine.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_today_exercise.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_today_exercise.xml"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_holder_exercise.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\holder_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\drawable\\ic_add.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_create_schedule.xml.flat",
@@ -170,6 +178,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_camera.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_today_exercise.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\proj\\app\\src\\main\\res\\menu\\activity_today_exercise.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\proj\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cycle_c.xml.flat",

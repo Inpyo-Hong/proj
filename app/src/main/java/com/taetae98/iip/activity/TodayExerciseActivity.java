@@ -3,6 +3,7 @@ package com.taetae98.iip.activity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,12 +12,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.CalendarView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.taetae98.iip.R;
-import com.taetae98.iip.adapter.ScheduleWithExerciseAdapter;
+import com.taetae98.iip.adapter.ExerciseAdapter;
 import com.taetae98.iip.dialog.CreateScheduleDialog;
+import com.taetae98.iip.dialog.RoutineDialog;
+import com.taetae98.iip.dto.Exercise;
 import com.taetae98.iip.dto.Schedule;
 import com.taetae98.iip.dto.ScheduleWithExercise;
 import com.taetae98.iip.singleton.AppDatabase;
@@ -27,6 +33,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TodayExerciseActivity extends AppCompatActivity {
@@ -35,8 +42,7 @@ public class TodayExerciseActivity extends AppCompatActivity {
     private int day;
     private int week;
 
-
-    private final ScheduleWithExerciseAdapter scheduleWithExerciseAdapter = new ScheduleWithExerciseAdapter();
+    private ExerciseAdapter exerciseAdapter = new ExerciseAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,77 +156,113 @@ public class TodayExerciseActivity extends AppCompatActivity {
                 }
             }
         }
-        notifyAdapter();
+
+        onCreateSupportActionBar();
         onCreateCalendarView();
         onCreateRecyclerView();
-        onCreateFloatingActionButton();
-
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        notifyAdapter();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_today_exercise, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add:
+                CreateScheduleDialog dialog = new CreateScheduleDialog(TodayExerciseActivity.this);
+                dialog.setCallback((exerciseId, set, rep) -> {
+                    for (int j=0;j<set;j++){
+                        AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
+                                new Schedule(0L, year, month, day, exerciseId, j+1, rep, false)
+                        );
+                    }
+
+                    notifyAdapter();
+                });
+
+                dialog.show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void onCreateSupportActionBar() {
+        setSupportActionBar(findViewById(R.id.toolbar));
     }
 
     private void onCreateCalendarView() {
         CalendarView calendarView = findViewById(R.id.calendar_view);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            calendarView.setOnDateChangeListener((view, year, month, day) -> {
-                this.year = year;
-                this.month = month;
-                this.day = day;
+        calendarView.setOnDateChangeListener((view, year, month, day) -> {
+            this.year = year;
+            this.month = month;
+            this.day = day;
 
-                notifyAdapter();
-            });
-        }
+            notifyAdapter();
+        });
     }
 
     private void onCreateRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(scheduleWithExerciseAdapter);
-        List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
+        notifyAdapter();
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+        exerciseAdapter.setOnExerciseClick(exercise -> {
+            List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
+            RoutineDialog dialog = new RoutineDialog(this);
+            dialog.setList(list.stream().filter(scheduleWithExercise -> {
+                Schedule schedule = scheduleWithExercise.getSchedule();
+                return (schedule.getYear() == year) &&
+                        (schedule.getMonth() == month) &&
+                        (schedule.getDay() == day) &&
+                        (schedule.getExerciseId() == exercise.getId());
+            }).collect(Collectors.toList()));
+
+            dialog.show();
+        });
+
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setAdapter(exerciseAdapter);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
+                0,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+        ) {
             @Override
-            public boolean onMove(@NonNull @NotNull RecyclerView recyclerView, @NonNull @NotNull RecyclerView.ViewHolder viewHolder, @NonNull @NotNull RecyclerView.ViewHolder target) {
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
             }
 
             @Override
-            public void onSwiped(@NonNull @NotNull RecyclerView.ViewHolder viewHolder, int direction) {
-                list.remove(viewHolder.getAdapterPosition());
-                scheduleWithExerciseAdapter.notifyDataSetChanged();
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                if (viewHolder instanceof ExerciseAdapter.ExerciseHolder) {
+                    Exercise exercise = ((ExerciseAdapter.ExerciseHolder) viewHolder).element;
+                    List<Schedule> eraseList = AppDatabase.getInstance(TodayExerciseActivity.this).schedule().selectWithDateAndExerciseId(
+                            year, month, day, exercise.getId()
+                    );
+
+                    eraseList.forEach(schedule -> {
+                        AppDatabase.getInstance(TodayExerciseActivity.this).schedule().delete(schedule);
+                    });
+
+                    notifyAdapter();
+                }
             }
         }).attachToRecyclerView(recyclerView);
     }
 
-    private void onCreateFloatingActionButton() {
-        FloatingActionButton floatingActionButton = findViewById(R.id.floating_action_button);
-        floatingActionButton.setOnClickListener(view -> {
-            CreateScheduleDialog dialog = new CreateScheduleDialog(TodayExerciseActivity.this);
-            dialog.setCallback((exerciseId, set, rep) -> {
-                for (int j=0;j<set;j++){
-                    AppDatabase.getInstance(TodayExerciseActivity.this).schedule().insert(
-                            new Schedule(0L, year, month, day, exerciseId, j+1, rep, false)
-                    );
-                }
-                notifyAdapter();
-            });
-
-            dialog.show();
-        });
-    }
-
-    private void notifyAdapter() {
+    public void notifyAdapter() {
         List<ScheduleWithExercise> list = AppDatabase.getInstance(this).schedule().selectWithExerciseList();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            scheduleWithExerciseAdapter.submitList(
-                    list.stream().filter(scheduleWithExercise -> scheduleWithExercise.getSchedule().getYear() == year &&
-                            scheduleWithExercise.getSchedule().getMonth() == month &&
-                            scheduleWithExercise.getSchedule().getDay() == day).collect(Collectors.toList())
-            );
-        }
+        List<Exercise> exerciseList = list.stream()
+                .filter(scheduleWithExercise -> {
+                    Schedule schedule = scheduleWithExercise.getSchedule();
+                    return schedule.getYear() == year && schedule.getMonth() == month && schedule.getDay() == day;
+                })
+                .map(ScheduleWithExercise::getExercise)
+                .distinct()
+                .collect(Collectors.toList());
+
+        exerciseAdapter.submitList(exerciseList);
     }
 }

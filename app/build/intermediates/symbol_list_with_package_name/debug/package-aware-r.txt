@@ -1651,6 +1651,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_add
 drawable ic_clock_black_24dp
 drawable ic_exercise
 drawable ic_keyboard_black_24dp
@@ -1890,7 +1891,6 @@ id fitToContents
 id fixed
 id flip
 id floating
-id floating_action_button
 id forever
 id fri
 id ghost_view
@@ -2259,6 +2259,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_create_schedule
+layout dialog_routine
 layout holder_exercise
 layout holder_schedule_with_exercise
 layout material_chip_input_combo
@@ -2335,6 +2336,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu activity_today_exercise
 plurals mtrl_badge_content_description
 raw bent
 raw eight
@@ -2374,6 +2376,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

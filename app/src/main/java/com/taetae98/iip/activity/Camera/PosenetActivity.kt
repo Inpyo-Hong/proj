@@ -2,9 +2,11 @@ package com.taetae98.iip.activity.Camera
 
 import android.Manifest
 import android.app.Activity
+import android.app.Activity.RESULT_OK
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.*
 import android.hardware.camera2.*
@@ -23,6 +25,7 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.taetae98.iip.R
+import com.taetae98.iip.activity.TodayExerciseActivity
 import com.taetae98.iip.dto.Schedule
 import com.taetae98.iip.dto.ScheduleWithExercise
 import com.taetae98.iip.posenet.lib.BodyPart
@@ -240,7 +243,7 @@ class PosenetActivity :
         // We don't use a front facing camera in this sample.
         val cameraDirection = characteristics.get(CameraCharacteristics.LENS_FACING)
         if (cameraDirection != null &&
-          cameraDirection == CameraCharacteristics.LENS_FACING_BACK
+          cameraDirection == CameraCharacteristics.LENS_FACING_FRONT
         ) {
           continue
         }
@@ -395,8 +398,7 @@ class PosenetActivity :
 
       // Create rotated version for portrait display
       val rotateMatrix = Matrix()
-      rotateMatrix.setScale(1F,-1F)
-      rotateMatrix.postRotate(180.0f)
+      rotateMatrix.postRotate(90.0f)
 
       val rotatedBitmap = Bitmap.createBitmap(
         imageBitmap, 0, 0, previewWidth, previewHeight,
@@ -562,11 +564,7 @@ class PosenetActivity :
     if(angle < 120 && squart == true){
       bent = true
     }
-    val E = activity?.intent?.getParcelableExtra<Schedule>("E")
-    AppDatabase.getInstance(context).schedule().update(
-      Schedule(E!!.id, E.year, E.month, E.day, E.exerciseId, E.set, E.rep, !E.done)
-    )
-    activity?.finish()
+
     if(angle < 90 && squart == true) {
       bent = false
       squart = false
@@ -575,13 +573,19 @@ class PosenetActivity :
       cnt += 1
       if(cnt==1){
         var mediaPlayer = MediaPlayer.create(context, R.raw.one).start()
-
       }
       if(cnt==2){
         var mediaPlayer = MediaPlayer.create(context, R.raw.two).start()
       }
       if(cnt==3){
         var mediaPlayer = MediaPlayer.create(context, R.raw.three).start()
+        val E = activity?.intent?.getParcelableExtra<Schedule>("E")
+        AppDatabase.getInstance(context).schedule().update(
+          Schedule(E!!.id, E.year, E.month, E.day, E.exerciseId, E.set, E.rep, !E.done)
+        )
+
+        activity?.startActivity(Intent(context,TodayExerciseActivity::class.java))
+        activity?.finish()
       }
 
       if(cnt==4){
@@ -637,7 +641,8 @@ class PosenetActivity :
     )
 
     // Draw!
-    surfaceHolder!!.unlockCanvasAndPost(canvas)
+    surfaceHolder?.unlockCanvasAndPost(canvas)
+
   }
 
   /** Process image using Posenet library.   */

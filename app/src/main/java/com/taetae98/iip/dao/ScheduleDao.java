@@ -14,4 +14,7 @@ import java.util.List;
 public interface ScheduleDao extends BaseDao<Schedule> {
     @Query("SELECT * FROM Schedule")
     List<ScheduleWithExercise> selectWithExerciseList();
+
+    @Query("SELECT * FROM Schedule WHERE year = :year AND month = :month AND day = :day AND exerciseId = :exerciseId")
+    List<Schedule> selectWithDateAndExerciseId(int year, int month, int day, long exerciseId);
 }

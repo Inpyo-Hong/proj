@@ -28,6 +28,16 @@ public class ExerciseAdapter extends BaseAdapter<Exercise> {
         }
     };
 
+    private OnExerciseClick onExerciseClick;
+
+    public OnExerciseClick getOnExerciseClick() {
+        return onExerciseClick;
+    }
+
+    public void setOnExerciseClick(OnExerciseClick onExerciseClick) {
+        this.onExerciseClick = onExerciseClick;
+    }
+
     public ExerciseAdapter() {
         super(itemCallback);
         setHasStableIds(true);
@@ -53,15 +63,14 @@ public class ExerciseAdapter extends BaseAdapter<Exercise> {
         return getItem(position).getId();
     }
 
-    static class ExerciseHolder extends BaseHolder<Exercise> {
+    public class ExerciseHolder extends BaseHolder<Exercise> {
         private final TextView nameTextView;
         public ExerciseHolder(View view) {
             super(view);
             view.setOnClickListener(v -> {
-                getContext().startActivity(
-                        new Intent(getContext(), ExerciseInformationActivity.class)
-                                .putExtra("exercise", element)
-                );
+                if (onExerciseClick != null) {
+                    onExerciseClick.onClick(element);
+                }
             });
             nameTextView = view.findViewById(R.id.exercise_name_text_view);
         }
@@ -71,5 +80,9 @@ public class ExerciseAdapter extends BaseAdapter<Exercise> {
             super.bind(element);
             nameTextView.setText(element.getName());
         }
+    }
+
+    public interface OnExerciseClick {
+        public void onClick(Exercise exercise);
     }
 }
