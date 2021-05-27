@@ -31,15 +31,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd3f775-5030-406d-b664-c82973c4d526" name="Default Changelist" comment="운동팁 내용 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/iip.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/iip.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/posenet/iip.posenet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/posenet/iip.posenet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5dd3f775-5030-406d-b664-c82973c4d526" name="Default Changelist" comment="메인페이지 디자인" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +53,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1skmrimmXw8IGfKtqbA5uETPngV" />
   <component name="ProjectLevelVcsManager">
@@ -77,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="memory.settings.postsync.last.time.stamp" value="1621843668199" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -97,11 +88,11 @@
       <recent name="C:\Users\user\Desktop\proj\app\src\main\res\layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/taetae98/iip/activity/Exercise_TIP/Tip" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager/Fragment" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/taetae98/iip/activity/Exercise_TIP/Tip/ViewPager" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
     </key>
   </component>
   <component name="RunManager">
@@ -232,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621967441550</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="메인페이지 디자인">
+      <created>1622101113711</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622101113711</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +250,8 @@
     <MESSAGE value="실행되게 만듬" />
     <MESSAGE value="posenet 연동" />
     <MESSAGE value="운동팁 내용 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="운동팁 내용 추가" />
+    <MESSAGE value="메인페이지 디자인" />
+    <option name="LAST_COMMIT_MESSAGE" value="메인페이지 디자인" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3557" y="706" key="#PSD" timestamp="1621750749657">
@@ -322,19 +321,20 @@
     </state>
     <state x="196" y="188" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1621967777303" />
     <state x="3541" y="604" key="SettingsEditor/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621749544413" />
-    <state x="307" y="375" key="Vcs.Push.Dialog.v2" timestamp="1621967445708">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-309" y="-905" key="Vcs.Push.Dialog.v2" timestamp="1622101119501">
+      <screen x="-859" y="-1415" width="3440" height="1415" />
     </state>
+    <state x="-309" y="-905" key="Vcs.Push.Dialog.v2/-859.-1415.3440.1415/0.25.1440.795@-859.-1415.3440.1415" timestamp="1622101119501" />
     <state x="307" y="375" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621967445708" />
     <state x="3632" y="693" key="Vcs.Push.Dialog.v2/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621762399388" />
     <state x="3834" y="737" key="chooseDestDirectoryDialog" timestamp="1621751228533">
       <screen x="3440" y="0" width="1200" height="1920" />
     </state>
     <state x="3834" y="737" key="chooseDestDirectoryDialog/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621751228533" />
-    <state x="331" y="-771" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622100074079">
+    <state x="331" y="-771" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622101131012">
       <screen x="-859" y="-1415" width="3440" height="1415" />
     </state>
-    <state x="331" y="-771" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-859.-1415.3440.1415/0.25.1440.795@-859.-1415.3440.1415" timestamp="1622100074079" />
+    <state x="331" y="-771" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-859.-1415.3440.1415/0.25.1440.795@-859.-1415.3440.1415" timestamp="1622101131012" />
     <state x="664" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621967520258" />
     <state x="3855" y="873" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400/3440.0.1200.1920@3440.0.1200.1920" timestamp="1621937255392" />
     <state x="3832" y="705" key="refactoring.ChangeSignatureDialog" timestamp="1621993989672">
