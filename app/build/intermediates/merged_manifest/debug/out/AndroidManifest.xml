@@ -18,7 +18,9 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PAT"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Iip" >
@@ -32,7 +34,8 @@
         <activity android:name="com.taetae98.iip.activity.TipActivity" />
         <activity android:name="com.taetae98.iip.activity.RoutineActivity" />
         <activity android:name="com.taetae98.iip.activity.ExerciseActivity" />
-        <activity android:name="com.taetae98.iip.activity.MainActivity" >
+        <activity android:name="com.taetae98.iip.activity.MainActivity" />
+        <activity android:name="com.taetae98.iip.activity.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
